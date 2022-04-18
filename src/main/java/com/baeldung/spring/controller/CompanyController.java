@@ -67,8 +67,6 @@ public class CompanyController {
 	
 	@RequestMapping(value = "/showapplicants", method = RequestMethod.GET)
 	public String showJobApplicants(@RequestParam("jobId") String jobId, Model model) {
-		
-		
 		JobPosting p1 = jobDao.getJobPosting(Integer.parseInt(jobId));
 		model.addAttribute	("job", p1);
 		return "jobprofile";

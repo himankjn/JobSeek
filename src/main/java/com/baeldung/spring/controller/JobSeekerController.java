@@ -76,7 +76,7 @@ public class JobSeekerController {
 			@RequestParam("min") Optional<String> min,
 			@RequestParam("max") Optional<String> max, Model model) {
 		JobPosting jpv = new JobPosting();
-
+		Company c=new Company();
 		String search = "";
 		if (!searchString.equals(Optional.empty())) {
 			search = searchString.get();
@@ -84,14 +84,17 @@ public class JobSeekerController {
 
 		List<?> jobIds = jobSeekerDao.searchJobs(search);
 
+		System.out.println("JOB ID LIST="+jobIds);
 		if ((!locations.equals(Optional.empty())) && (locations.get()!="")) {
 			System.out.println("location");
 			jpv.setLocation(locations.get());
 		}
 
 		if (!companies.equals(Optional.empty()) && companies.get()!="") {
+			/*System.out.println("company");
+			jpv.getCompany().setCompanyName(companies.get());*/
+			jpv.setCompany(c);
 			jpv.getCompany().setCompanyName(companies.get());
-			System.out.println(jpv);
 		}
 
 		if (!min.equals(Optional.empty()) && !max.equals(Optional.empty())) {
@@ -100,6 +103,7 @@ public class JobSeekerController {
 		}
 
 		List<?> jp = jobSeekerDao.filterJobs(jpv, jobIds);
+		System.out.println(jp);
 
 		JobSeeker jobseeker = jobSeekerDao.getJobSeeker(Integer.parseInt(userId));
 		

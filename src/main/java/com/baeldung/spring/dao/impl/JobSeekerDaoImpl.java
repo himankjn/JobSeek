@@ -52,13 +52,12 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 			selectQuery = selectQuery.concat(" AND jpv.location IN (:locations) ");
 		}
 
+		if (null != jpv.getCompany() && null != jpv.getCompany().getCompanyName()) {
+			companyFlag = true;
+			selectQuery = selectQuery.concat(" AND jpv.company.companyName IN (:companies) ");
+		}
 
-//		if (null != jpv.getCompany() && null != jpv.getCompany().getCompanyName()) {
-//			companyFlag = true;
-//			selectQuery = selectQuery.concat(" AND jpv.companyName IN (:companies) ");
-//		}
-//
-//
+
 
 		if (null != jpv.getSalary()) {
 			salaryFlag = true;
@@ -75,11 +74,11 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 		}
 
 
-//		if (companyFlag) {
-//			String[] companyArray = jpv.getCompany().getCompanyName().split(",");
-//			List<String> companyList = Arrays.asList(companyArray);
-//			query.setParameter("companies", companyList);
-//		}
+		if (companyFlag) {
+			String[] companyArray = jpv.getCompany().getCompanyName().split(",");
+			List<String> companyList = Arrays.asList(companyArray);
+			query.setParameter("companies", companyList);
+		}
 
 		if (salaryFlag) {
 			salaries = jpv.getSalary().split(",");

@@ -911,7 +911,7 @@ a.stp-back-totop {
 	<header id="stp-header">
 		<div class="container">
 		<div class="row " style="margin: auto">
-					<form class="" action="/company/getapplicants" method="get">
+					<form class="" action="/company/showapplicants" method="get">
 						<input type="hidden" name="jobId" value="${job.jobId}"></input>
 
 						<button type="submit" class="btn btn-block btn-primary">View all job applicants for this job</button>
