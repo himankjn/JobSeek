@@ -29,7 +29,7 @@
 }
 
 #team {
-	margin-top: 10px;
+	margin-top: 7.5%;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	color: #fff;
@@ -208,15 +208,15 @@ body {
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+				<a class="navbar-brand" href="/findjobs">JobSeeker</a>
 			</div>
 		</div>
 	</nav>
 	<div class="container-fluid">
 		<div class="container">
 			<h1 class="well">
-				<img src="http://qspear.com/admin/images/news_events_images/partner_news.png" height="80" width="auto">Registration
-				Form
+				<strong class="text-center"><img src="https://i.pinimg.com/236x/b0/81/6b/b0816b0277a696f873c3d5db164de0ce.jpg" height="80" width="auto">Registration
+				Form</strong>
 			</h1>
 			<div class="col-lg-12 well">
 				<div class="row">
@@ -234,22 +234,15 @@ body {
 							</div>
 						</div>
 						<div class="col-sm-12">
-							<div class="row">
-								
-									<label>Name *</label> <input type="text"
-										placeholder="Enter Full Name Here.." class="form-control" name="name">
-								
+							<div class="form-group">
+								<label>Name</label> <input type="text" placeholder="Enter Full Name Here.." class="form-control" name="name" required>
 							</div>
 
 							<div class="form-group">
-								<label>Email Address *</label> <input type="text" name="email"
-									placeholder="Enter Email Address Here.." class="form-control"
-									name="email" required>
+								<label>Email Address</label> <input type="text" name="email" placeholder="Enter Email Address Here.." class="form-control" name="email" required>
 							</div>
 							<div class="form-group">
-								<label><b>Password *</b></label> <input type="password" name="password"
-									placeholder="Enter Password" class="form-control" name="psw"
-									required>
+								<label>Password</label> <input type="password" name="password" placeholder="Enter Password" class="form-control" name="psw" required>
 							</div>
 
 
@@ -265,16 +258,19 @@ body {
 
 
 
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
+<%--		<div id="team" class="container-fluid text-center">--%>
+<%--			<h1>Team:</h1>--%>
+<%--			<p>Amay</p>--%>
+<%--			<p>Ashay</p>--%>
+<%--			<p>Avdeep</p>--%>
+<%--			<p>Surendra</p>--%>
+<%--			<p>Surendra</p>--%>
+<%--		</div>--%>
 
 	</div>
+	<footer id="team" class="text-center">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 
 
 
