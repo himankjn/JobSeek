@@ -262,7 +262,7 @@ body {
 
 		
 		<div class="results">
-			<h2>All jobs posted by you</h2>
+			<h2 class="text-center jumbotron">All jobs posted by you</h2>
 			<p>${fn:length(jobs)} results</p>
 
 			
@@ -271,12 +271,13 @@ body {
 				<a class="a1" href="/company/showjob?cid=${company.companyId}&jobId=${job[0]}">${job[1]}</a>
 				<div class="row">
 					<div class="col-sm-4 groups">
-						<p>
-							<b>jobId:</b> ${job[0]}
-						</p>
+<%--						<p>--%>
+<%--							<b>jobId:</b> ${job[0]}--%>
+<%--						</p>--%>
 						<p>
 							<b>location:</b> ${job[4]}
 						</p>
+
 						<p>
 							<b>Salary:</b> $ ${job[5]}
 						</p>

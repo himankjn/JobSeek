@@ -19,6 +19,9 @@ import com.baeldung.spring.dao.JobPostingDao;
 import com.baeldung.spring.entity.Company;
 import com.baeldung.spring.entity.JobPosting;
 
+import javax.management.Query;
+import javax.persistence.EntityManager;
+
 /**
  * @author surendra
  *
@@ -106,6 +109,7 @@ public class JobPostingController {
 	public String deleteJobPosting(@PathVariable("id") int id, Model model) {
 
 		if (jobDao.deleteJobPosting(id)) {
+			String name="";
 			String message = "Job Posting with JobID " + id + " is deleted successfully";
 			model.addAttribute("message", message);
 			return "message";

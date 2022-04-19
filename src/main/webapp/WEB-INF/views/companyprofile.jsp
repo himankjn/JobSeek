@@ -13,7 +13,7 @@
 	content="Resume - Responsive HTML5 Template design & developed by www.sharojit.com from the house of www.themesplugin.com">
 <meta name="author" content="www.themesplugin.com">
 
-
+	<title>Dashboard | JobSeek</title>
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script
