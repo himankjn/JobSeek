@@ -535,7 +535,7 @@ body {
 <%--		</div>--%>
 
 	</div>
-	<footer id="team" class="text-center">
+	<footer id="team" class="text-center navbar-fixed-bottom">
 		<p> &copy; 2022 JobSeek Company</p>
 	</footer>
 
