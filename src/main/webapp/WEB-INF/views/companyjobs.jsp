@@ -9,7 +9,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>Search jobs | FindJobs.com</title>
+<title>Search jobs | JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -201,6 +201,13 @@ to {
 	border-left: 3px solid #689f38;
 	border-right: 3px solid #689f38;
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 
 .row1 {
 	overflow: hidden;
@@ -227,30 +234,30 @@ body {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+						<a class="navbar-brand" href="/findjobs">JobSeek</a>
 					</div>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#team">Team</a></li>
+						<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
 
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">logged in as
 								${company.companyName} <span class="caret"></span>
 						</a>
 							<ul class="dropdown-menu">
-								<li><a href="/company/profile/${company.companyId}">Profile</a></li>
+<%--								<li><a href="/company/profile/${company.companyId}">Profile</a></li>--%>
 								<li><a href="/findjobs">Logout</a></li>
 							</ul></li>
 					</ul>
 				</div>
 			</nav>
 
-		<div class="jumbotron">
-			<div class="container text-center">
+		<div  style="margin-top: 3%" class="text-center">
+<%--			<div class="container">--%>
 
+					<img src="https://www3.recruiter.com/i/wp-content/uploads/2021/10/free-recruiter-job-posting.jpg" width="70%">
+<%--				<h2>Job Postings</h2>--%>
 
-				<h2>Job Postings</h2>
-
-			</div>
+<%--			</div>--%>
 		</div>
 
 		
@@ -310,14 +317,9 @@ body {
 		</div>
 
 
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
+		<footer id="team" class="text-center navbar-fixed-bottom" >
+			<p> &copy; 2022 JobSeek Company</p>
+		</footer>
 
 	</div>
 	</div>

@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>Register | FindJobs.com</title>
+<title>Register | JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -192,6 +192,13 @@ to {
 	margin-bottom: -99999px;
 	padding-bottom: 99999px;
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 
 body {
 	padding-top: 20px;
@@ -208,22 +215,33 @@ body {
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+				<a class="navbar-brand" href="/findjobs">JobSeek</a>
 			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
+
+				<li class="dropdown"><a class="dropdown-toggle"
+										data-toggle="dropdown" href="#">logged in as
+					${company.companyName} <span class="caret"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<%--								<li><a href="/company/profile/${company.companyId}">Profile</a></li>--%>
+						<li><a href="/findjobs">Logout</a></li>
+					</ul></li>
+			</ul>
 		</div>
 	</nav>
 	<div class="container-fluid">
 		<div class="container">
-			<div class="well">
+			<div class="well" style="margin-top: 3%">
 				<h1>
-					<img
-						src="http://qspear.com/admin/images/news_events_images/partner_news.png"
-						height="80" width="auto">Complete Registration
+					<strong class="text-center"><img src="https://i.pinimg.com/236x/b0/81/6b/b0816b0277a696f873c3d5db164de0ce.jpg" height="80" width="auto">Complete Registration
+						</strong>
 				</h1>
 
 			</div>
 			<div class="col-lg-12 well">
-				<h4 class="text-center">Recruiter registration</h4>
+				<h2 class="text-center">Recruiter registration</h2>
 				<br>
 				<div class="row">
 					<form action="/update/company" method="post">
@@ -268,14 +286,9 @@ body {
 
 
 
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
+		<footer id="team" class="text-center navbar-fixed-bottom">
+			<p> &copy; 2022 JobSeek Company</p>
+		</footer>
 
 	</div>
 

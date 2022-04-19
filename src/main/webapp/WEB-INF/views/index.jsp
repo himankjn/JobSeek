@@ -33,7 +33,7 @@
 }
 
 #team {
-	margin-top: 10px;
+	margin-top: 5px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	color: #fff;
@@ -41,7 +41,7 @@
 }
 
 .jumbotron {
-	margin-bottom: 10px;
+	margin-bottom: 1px;
 }
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -198,7 +198,7 @@ to {
 
 body {
 	padding-top: 20px;
-	padding-bottom: 20px;
+	/*padding-bottom: 10px;*/
 }
 </style>
 
@@ -224,7 +224,9 @@ body {
 		</nav>
 
 		<div class="jumbotron text-center">
-			<img src="https://blog.zoho.com/wp-content/uploads/2021/03/Apply-with-seek01.gif" width="50%">
+
+			<img src="https://www.signitysolutions.com/images/services/job-portal/banner.png">
+<%--            <img src="https://blog.zoho.com/wp-content/uploads/2021/03/Apply-with-seek01.gif" width="50%">--%>
 <%--			<div class="container text-center">--%>
 <%--			<div class="container-fluid" style="margin-top: 40px">${message}</div>--%>
 <%--				<img src="https://media.istockphoto.com/photos/online-job-search-picture-id1148395111?k=20&m=1148395111&s=612x612&w=0&h=ZBxq4z5x6ewmKIUQ-nYWB2clqdg9KERTZplw5uCvw78=">--%>
@@ -242,6 +244,7 @@ body {
 		<div class="row picture row1">
 			<img src=http://s3.amazonaws.com/fjwp/blog/wp-content/uploads/2016/03/04034507/Job-Searching-Online-8-Best-Practices-You-Need-to-Know.jpg class="img-responsive col-sm-6 cols"
 				alt="Cinque Terre">
+<%--			<img src="https://www.naylor.com/wp-content/uploads/2017/07/careers_career-fairs.gif" class="img-responsive col-sm-6 cols" width="50%">--%>
 			<div class=" row vertical-divider col-sm-6 text-center cols row1 row2 well" style="background-color: #B6FFCE;">
 				<h1>Start now</h1>
 				<div class="col-xs-6"	>
