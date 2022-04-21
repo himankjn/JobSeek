@@ -73,7 +73,14 @@ public class JobApplicationDaoImpl implements JobApplicationDao {
 		List<?> querylist = query.getResultList();
 		return querylist;
 	}
-
+	@Override
+	public List<?> getJobApplicationsbyjobIdAndUserId(int jobId,int userId){
+		Query query = entityManager.createQuery("SELECT ja.appId,ja.interviewAccepted,ja.interviewFlag,ja.interviewLocation,ja.interviewTime,ja.resume,ja.resumePath,ja.state,ja.jobSeeker.jobseekerId,ja.jobSeeker.firstName,ja.jobSeeker.lastName,ja.jobposting.jobId FROM JobApplication ja WHERE ja.jobposting.jobId = :jobId AND ja.jobSeeker.jobseekerId=:userId");
+		query.setParameter("jobId",jobId);
+		query.setParameter("userId",userId);
+		List<?> querylist = query.getResultList();
+		return querylist;
+	}
 	/*
 	 * (non-Javadoc)
 	 * 
