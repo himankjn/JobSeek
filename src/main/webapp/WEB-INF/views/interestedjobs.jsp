@@ -9,7 +9,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>Interested jobs | FindJobs.com</title>
+<title>Interested Jobs | JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -34,9 +34,9 @@
 }
 
 #team {
-	margin-top: 10px;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	color: #fff;
 	background-color: #2E2E2E;
 }
@@ -229,17 +229,19 @@ body {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#team">Team</a></li>
+					<li class="active"><a href="/userprofile/${seeker.jobseekerId}">Dashboard</a></li>
+					<%--					<li><a href="/searchjobs?userId=${seeker.jobseekerId}">Search Jobs</a></li>--%>
 
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">logged in as
-							${seeker.firstName} <span class="caret"></span>
+											data-toggle="dropdown" href="#">logged in as
+						${seeker.firstName} <span class="caret"></span>
 					</a>
 						<ul class="dropdown-menu">
-							<li><a href="/userprofile/${seeker.jobseekerId}">Profile</a></li>
+							<%--							<li><a href="/userprofile/${seeker.jobseekerId}">Profile</a></li>--%>
+							<%--							<li><a href="/searchjobs?userId=${seeker.jobseekerId}">Search Jobs</a></li>--%>
 							<li><a href="/findjobs">Logout</a></li>
 						</ul></li>
 				</ul>
@@ -248,8 +250,6 @@ body {
 
 		<div class="jumbotron">
 			<div class="container text-center">
-
-
 				<h2>Interested jobs for ${seeker.firstName}</h2>
 
 			</div>
@@ -260,12 +260,12 @@ body {
 			<div class="row">
 				<div class="col-sm-6">
 					<h2>Search Results:</h2>
-					<p>${fn:length(jobs)}search results</p>
+					<p>${fn:length(jobs)} search results</p>
 				</div>
 				<div class="col-sm-6">
 					<form action="/searchjobs" method="get">
 						<input type="hidden" name="userId" value="${seeker.jobseekerId}"></input>
-						<button type="submit" class="btn btn-block btn-lg btn-primary">Search
+						<button type="submit" class="btn btn-block btn-lg btn-info">Search
 							all jobs</button>
 					</form>
 				</div>
@@ -319,16 +319,6 @@ body {
 
 		</div>
 
-
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
-
 	</div>
 	</div>
 
@@ -343,7 +333,9 @@ body {
 			}
 		}
 	</script>
-
+	<footer id="team" class="text-center navbar-fixed-bottom">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 </body>
 
 </html>
