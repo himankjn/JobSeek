@@ -215,6 +215,14 @@ public class JobSeekerController {
 			}
 
 			else {
+				if(companyDao.getCompanyIdFromEmail(email).size()>0){
+
+					String message1="<div class=\"alert alert-danger\">Recruiter with this Email <strong>already exists!</strong> Please <strong>login</strong> or use another email.</div>";
+
+					model.addAttribute("message1",message1);
+					return "register";
+				}
+
 
 				Company c = new Company();
 				c.setVerified(false);
