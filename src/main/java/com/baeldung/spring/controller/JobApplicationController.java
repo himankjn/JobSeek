@@ -22,25 +22,17 @@ import javax.persistence.Query;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.baeldung.spring.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.baeldung.spring.dao.InterestedDao;
-import com.baeldung.spring.dao.JobApplicationDao;
-import com.baeldung.spring.dao.JobPostingDao;
-import com.baeldung.spring.dao.JobSeekerDao;
 import com.baeldung.spring.entity.Company;
 import com.baeldung.spring.entity.JobApplication;
 import com.baeldung.spring.entity.JobPosting;
@@ -69,12 +61,14 @@ public class JobApplicationController {
 	JobApplicationDao jobAppDao;
 
 	@Autowired
+	CompanyDao companyDao;
+	@Autowired
 	InterestedDao interestedDao;
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	private static String UPLOADED_FOLDER = "C:/";
+	//private static String UPLOADED_FOLDER = "C:/";
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String applyPage(@RequestParam("userId") String jobSeekerId, @RequestParam("jobId") String jobId,
@@ -106,12 +100,14 @@ public class JobApplicationController {
 			try {
 				System.out.println("Inside Upload");
 				byte[] bytes = file.get().getBytes();
+
 				Path path = Paths.get(UPLOADED_FOLDER + file.get().getOriginalFilename());
 				JobApplication ja = new JobApplication();
 				ja = jobAppDao.apply(Integer.parseInt(jobSeekerId), Integer.parseInt(jobId), resumeFlag,
-						path.toString());// apply(Integer.parseInt(jobSeekerId),
+						path.toString());	// apply(Integer.parseInt(jobSeekerId),
 											// Integer.parseInt(jobId),
 											// resumeFlag, path);
+
 				JobSeeker js = jobSeekerDao.getJobSeeker(Integer.parseInt(jobSeekerId));
 				JobPosting jp = jobDao.getJobPosting(Integer.parseInt(jobId));
 				emailService.sendSimpleMessage(js.getEmailId(),
@@ -217,6 +213,21 @@ public class JobApplicationController {
 		return "modified";
 	}
 
+	@RequestMapping(value = "/userjobapplication", method = RequestMethod.POST)
+	public String showUserApplication(@RequestParam("appId") int appid, @RequestParam("userId") String jobSeekerId, @RequestParam("jobId") String jobId, Model model){
+
+		JobApplication ja = jobAppDao.getJobApplication(appid);
+		JobSeeker js=jobSeekerDao.getJobSeeker(Integer.parseInt(jobSeekerId));
+		JobPosting jp=jobDao.getJobPosting(Integer.parseInt(jobId));
+		Company cp= companyDao.getCompany(jp.getCompany().getCompanyId());
+
+		model.addAttribute("jobapp", ja);
+		model.addAttribute("user",js);
+		model.addAttribute("job",jp);
+		model.addAttribute("company",cp);
+
+		return "userjobapplication";
+	}
 	// ***************************************************
 	@RequestMapping("/viewResume")
 	public void downloadPDFResource(HttpServletRequest request, HttpServletResponse response,

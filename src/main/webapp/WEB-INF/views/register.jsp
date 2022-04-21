@@ -212,6 +212,9 @@ body {
 			</div>
 		</div>
 	</nav>
+
+	<div class="container-fluid" style="margin-top: 40px">${message}</div>
+
 	<div class="container-fluid">
 		<div class="container">
 			<h1 class="well">

@@ -47,6 +47,7 @@ public interface JobSeekerDao {
 	 */
 	public List<String> PasswordLookUp(String emailid);
 
+
 	/**
 	 * @param j
 	 */

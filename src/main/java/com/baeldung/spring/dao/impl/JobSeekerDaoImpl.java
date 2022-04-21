@@ -150,6 +150,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 		return list;
 	}
 
+
 	/*
 	 * (non-Javadoc)
 	 * 

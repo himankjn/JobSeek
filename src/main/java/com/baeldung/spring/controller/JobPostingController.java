@@ -106,7 +106,7 @@ public class JobPostingController {
 	public String deleteJobPosting(@PathVariable("id") int id, Model model) {
 
 		if (jobDao.deleteJobPosting(id)) {
-			String message = "Job Posting with JobID " + id + " is deleted successfully";
+			String message = "Job Posting with JobID: " + id + "and Job title: " + jobDao.getJobPosting(id).getTitle() + " is deleted successfully";
 			model.addAttribute("message", message);
 			return "message";
 		} else {

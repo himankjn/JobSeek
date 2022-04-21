@@ -97,7 +97,11 @@ public class MainController {
 					List<Integer> jsl = new ArrayList<Integer>();
 					jsl = jobSeekerDao.getUserIdFromEmail(email);
 					JobSeeker js = jobSeekerDao.getJobSeeker(jsl.get(0));
-					   
+					if(!js.isVerified()){
+						String message2="<div class=\"alert alert-danger\">Your email hasn't been verified! Please Verify the email before tyring to login.</div>";
+						model.addAttribute("message2",message2);
+						return "index";
+					}
 					model.addAttribute("seeker", js);
 					return "userprofile";
 				}
@@ -125,10 +129,12 @@ public class MainController {
 		if (type.equals("seeker")) {
 
 			JobSeeker j = jobSeekerDao.getJobSeeker(userId);
+			String pass=j.getPassword();
 			if (j.getVerificationCode() == pin) {
 				j.setVerified(true);
 				jobSeekerDao.verify(j);
 				model.addAttribute("seeker", j);
+				model.addAttribute("pass",pass);
 				return "userregister";
 			} else {
 				return "error";

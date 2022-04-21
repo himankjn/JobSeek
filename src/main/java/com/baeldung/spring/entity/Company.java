@@ -3,14 +3,9 @@
  */
 package com.baeldung.spring.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * @author amayd
  *
@@ -27,7 +22,10 @@ public class Company {
 	
 	@Column(name="companyName")
 	private String companyName;
-	
+
+	@OneToMany(mappedBy = "company",cascade = CascadeType.ALL)
+	private List<JobPosting> jobpostings=new ArrayList<>();
+
 	@Column(name="headquarters")
 	private String headquarters;
 	

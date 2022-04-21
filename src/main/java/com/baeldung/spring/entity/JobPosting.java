@@ -1,15 +1,8 @@
 package com.baeldung.spring.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * @author amayd
  *
@@ -24,12 +17,15 @@ public class JobPosting {
 	@Column(name = "jobId", unique = true, nullable = false)
 	private int jobId;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "companyId")
 	private Company company;
 
 	@Column(name = "state")
 	private int state;
+
+	@OneToMany(mappedBy = "jobposting",cascade = CascadeType.ALL)
+	private List<JobApplication> jobapplications=new ArrayList();
 
 	@Column(name = "title")
 	private String title;

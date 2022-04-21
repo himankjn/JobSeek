@@ -170,6 +170,15 @@ public class JobSeekerController {
 		try {
 
 			if (type.equals("seeker")) {
+
+				if(jobSeekerDao.getUserIdFromEmail(email).size()>0){
+
+					String message="<div class=\"alert alert-danger\">User with this Email <strong>already exists!</strong> Please <strong>login</strong> or use another email.</div>";
+
+					model.addAttribute("message",message);
+					return "register";
+				}
+
 				JobSeeker j = new JobSeeker();
 
 				j.setFirstName(splited[0]);

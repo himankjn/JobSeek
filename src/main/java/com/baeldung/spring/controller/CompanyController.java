@@ -6,6 +6,8 @@ package com.baeldung.spring.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.baeldung.spring.dao.*;
+import com.baeldung.spring.entity.JobApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -17,13 +19,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.baeldung.spring.dao.CompanyDao;
-import com.baeldung.spring.dao.InterestedDao;
-import com.baeldung.spring.dao.JobPostingDao;
-import com.baeldung.spring.dao.JobSeekerDao;
 import com.baeldung.spring.entity.Company;
 import com.baeldung.spring.entity.JobPosting;
 import com.baeldung.spring.entity.JobSeeker;
+import com.baeldung.spring.entity.JobApplication;
 
 /**
  * @author amayd
@@ -38,7 +37,10 @@ public class CompanyController {
 	
 	@Autowired
 	JobPostingDao jobDao;
-	
+
+	@Autowired
+	JobApplicationDao jobappDao;
+
 	@Autowired
 	InterestedDao interestedDao;
 	
@@ -54,10 +56,8 @@ public class CompanyController {
 		return "companyprofile"; 
 	}
 	
-	@RequestMapping(value = 	"/showjob", method = RequestMethod.GET)
+	@RequestMapping(value = "/showjob", method = RequestMethod.GET)
 	public String showJob(@RequestParam("cid") String cid, @RequestParam("jobId") String jobId, Model model) {
-		
-		
 		JobPosting p1 = jobDao.getJobPosting(Integer.parseInt(jobId));
 		Company company = companyDao.getCompany(Integer.parseInt(cid));
 		model.addAttribute("job", p1);
@@ -67,9 +67,14 @@ public class CompanyController {
 	
 	@RequestMapping(value = "/showapplicants", method = RequestMethod.GET)
 	public String showJobApplicants(@RequestParam("jobId") String jobId, Model model) {
+
 		JobPosting p1 = jobDao.getJobPosting(Integer.parseInt(jobId));
+		List<?> Ja= jobappDao.getJobApplicationsbyjobId(Integer.parseInt(jobId));
+		int companyId=jobDao.getJobPosting(Integer.parseInt(jobId)).getCompany().getCompanyId();
 		model.addAttribute	("job", p1);
-		return "jobprofile";
+		model.addAttribute("jobapps",Ja);
+		model.addAttribute("companyId",companyId);
+		return "jobapplicants";
 	}
 	
 	/**
@@ -82,7 +87,6 @@ public class CompanyController {
 		List<?> companyJobPostings = new ArrayList<String>();
 		companyJobPostings = companyDao.getJobsByCompany(Integer.parseInt(companyId));
 		Company company = companyDao.getCompany(Integer.parseInt(companyId));
-		//System.out.println("hello"+company.getCompanyName());
 		System.out.println("bye"+companyJobPostings);
 		model.addAttribute("jobs", companyJobPostings);
 		model.addAttribute("company", company);

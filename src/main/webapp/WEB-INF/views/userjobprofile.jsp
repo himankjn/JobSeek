@@ -977,7 +977,7 @@ a.stp-back-totop {
 				</ul>
 			</div>
 		</nav>
-	</div>
+	</div>n
 	<div class="container-fluid" style="margin-top: 40px">${message}</div>
 
 	<div class="bod" style="margin-top: 5px">
@@ -1026,9 +1026,9 @@ a.stp-back-totop {
 							<button class="btn btn-lg btn-block btn-warning"
 								onclick="">Already Applied</button>
 						</c:if>
-					
-					
-							
+
+
+
 
 					</div>
 				</div>

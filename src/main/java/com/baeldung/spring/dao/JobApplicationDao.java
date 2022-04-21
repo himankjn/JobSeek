@@ -5,6 +5,8 @@ package com.baeldung.spring.dao;
 
 import com.baeldung.spring.entity.JobApplication;
 
+import java.util.List;
+
 /**
  * @author amayd
  *
@@ -32,6 +34,7 @@ public interface JobApplicationDao {
 	 */
 	JobApplication getJobApplication(int jobAppId);
 
+	List<?> getJobApplicationsbyjobId(int jobId);
 	/**
 	 * @param state
 	 * @return Modified job application

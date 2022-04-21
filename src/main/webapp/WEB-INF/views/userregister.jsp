@@ -226,7 +226,7 @@ body {
 					<form action="/update" method="post">
 
 						<input type="hidden" name="id" value="${seeker.jobseekerId}"></input>
-						<input type="hidden" name="password" value="123"></input>
+						<input type="hidden" name="password" value="${pass}"></input>
 
 
 						<div class="col-sm-12">

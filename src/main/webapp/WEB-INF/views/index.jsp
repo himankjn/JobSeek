@@ -223,6 +223,8 @@ body {
 			</div>
 		</nav>
 
+		<div class="container-fluid" style="margin-top: 40px">${message2}</div>
+
 		<div class="jumbotron text-center">
 			<img src="https://blog.zoho.com/wp-content/uploads/2021/03/Apply-with-seek01.gif" width="50%">
 <%--			<div class="container text-center">--%>
