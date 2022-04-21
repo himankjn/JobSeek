@@ -213,7 +213,8 @@ body {
 		</div>
 	</nav>
 
-	<div class="container-fluid" style="margin-top: 40px">${message}</div>
+	<div class="container-fluid" style="margin-top: 40px">${message1}</div>
+	<div class="container-fluid" style="margin-top: 40px">${message2}</div>
 
 	<div class="container-fluid">
 		<div class="container">

@@ -894,7 +894,7 @@ a.stp-back-totop {
 				</ul>
 			</div>
 		</nav>
-
+		<div class="container-fluid" style="margin-top: 40px">${message}</div>
 
 		<script>
 			UPLOADCARE_PUBLIC_KEY = 'f78da83ce6beb3f386b7';
