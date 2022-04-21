@@ -82,9 +82,15 @@ public class JobSeekerController {
 			search = searchString.get();
 		}
 
+		System.out.println("here");
 		List<?> jobIds = jobSeekerDao.searchJobs(search);
+		if(jobIds.size()==0){
+			System.out.println("wow yo");
+			String message="<div class=\"alert alert-danger\">No jobs available as per your requirements at the moment!</div>";
+			model.addAttribute("message",message);
+			return "userprofile";
+		}
 
-		System.out.println("JOB ID LIST="+jobIds);
 		if ((!locations.equals(Optional.empty())) && (locations.get()!="")) {
 			System.out.println("location");
 			jpv.setLocation(locations.get());
@@ -110,6 +116,8 @@ public class JobSeekerController {
 		model.addAttribute("jobs", jp);
 		model.addAttribute("seeker", jobseeker);
 
+
+		//return userprofile
 		return "jobsearch";
 	}
 
@@ -173,9 +181,9 @@ public class JobSeekerController {
 
 				if(jobSeekerDao.getUserIdFromEmail(email).size()>0){
 
-					String message="<div class=\"alert alert-danger\">User with this Email <strong>already exists!</strong> Please <strong>login</strong> or use another email.</div>";
+					String message1="<div class=\"alert alert-danger\">User with this Email <strong>already exists!</strong> Please <strong>login</strong> or use another email.</div>";
 
-					model.addAttribute("message",message);
+					model.addAttribute("message1",message1);
 					return "register";
 				}
 
@@ -200,7 +208,9 @@ public class JobSeekerController {
 
 				emailService.sendSimpleMessage(email, "Verification Pin", verificationUrl);
 				model.addAttribute("name", j1.getFirstName());
-				return "codesent";
+				String message2="<div class=\"alert alert-success\">A verification link has been sent to your email address. Please verify! </div>";
+				model.addAttribute("message2",message2);
+				return "register";
 
 			}
 
@@ -223,8 +233,9 @@ public class JobSeekerController {
 				emailService.sendSimpleMessage(email, "Verification Pin", verificationUrl);
 				model.addAttribute("name", c1.getCompanyName());
 
-				// Company c1 =companyDao.
-				return "codesent";
+				String message2="<div class=\"alert alert-success\">A verification link has been sent to your email address. Please verify! </div>";
+				model.addAttribute("message2",message2);
+				return "register";
 			}
 
 		} catch (SQLException se) {

@@ -251,6 +251,10 @@ body {
 				</div>
 			</nav>
 
+		<c:if test="${message.length()>0}">
+			<div class="container-fluid" style="margin-top: 40px"><div class="alert alert-success">Job Posting with job id: <strong>${id}</strong> and title: <strong>${mytitle}</strong> has been <strong>Successfully deleted</strong></div></div>
+		</c:if>
+
 		<div  style="margin-top: 3%" class="text-center">
 <%--			<div class="container">--%>
 

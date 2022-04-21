@@ -107,11 +107,14 @@ public class JobPostingController {
 	 */
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	public String deleteJobPosting(@PathVariable("id") int id, Model model) {
-
+		String mytitle=jobDao.getJobPosting(id).getTitle();
 		if (jobDao.deleteJobPosting(id)) {
-			String message = "Job Posting with JobID: " + id + "and Job title: " + jobDao.getJobPosting(id).getTitle() + " is deleted successfully";
+			System.out.println("inside delete");
+			String message = "<div class=\"alert alert-success\">Job Posting with job id: <strong>${id}</strong> and title: <strong>${mytitle}</strong> has been <strong>Successfully deleted</strong></div>";
 			model.addAttribute("message", message);
-			return "message";
+			model.addAttribute("id",id);
+			model.addAttribute("mytitle",mytitle);
+			return "companyjobs";
 		} else {
 			return "error";
 		}

@@ -17,7 +17,7 @@ public class JobPosting {
 	@Column(name = "jobId", unique = true, nullable = false)
 	private int jobId;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne()
 	@JoinColumn(name = "companyId")
 	private Company company;
 
