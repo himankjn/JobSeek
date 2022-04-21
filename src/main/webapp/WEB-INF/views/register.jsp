@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>Register | FindJobs.com</title>
+<title>Register | JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -271,7 +271,7 @@ body {
 <%--		</div>--%>
 
 	</div>
-	<footer id="team" class="text-center">
+	<footer id="team" class="text-center navbar-fixed-bottom">
 		<p> &copy; 2022 JobSeek Company</p>
 	</footer>
 

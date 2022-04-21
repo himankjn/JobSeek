@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>FindJobs.com</title>
+<title>JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -19,7 +19,15 @@
 <!-- Latest compiled JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<style>
+	#team {
+		margin-top: 5px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		color: #fff;
+		background-color: #2E2E2E;
+	}
+</style>
 </head>
 
 <body id="pagetop">
@@ -29,12 +37,19 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					
-					<li class="active"><a href="#team">Team</a></li>
-				
+					<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
+
+					<li class="dropdown"><a class="dropdown-toggle"
+											data-toggle="dropdown" href="#">logged in as
+						${company.companyName} <span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<%--								<li><a href="/company/profile/${company.companyId}">Profile</a></li>--%>
+							<li><a href="/findjobs">Logout</a></li>
+						</ul></li>
 				</ul>
 			</div>
 		</nav>
@@ -42,23 +57,16 @@
 		<div class="jumbotron">
 			<div class="container text-center">
 
-				<h2>
-					<img src="http://qspear.com/admin/images/news_events_images/partner_news.png" height="80" width="auto">FindJobs.com
-				</h2>
-				<p>Message</p>
+<%--				<h2>--%>
+<%--					<img src="http://qspear.com/admin/images/news_events_images/partner_news.png" height="80" width="auto">FindJobs.com--%>
+<%--				</h2>--%>
+				<h2>Message</h2>
 
 				<h1>${message}</h1>
 			</div>
 		</div>
 		
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
+
 
 	</div>
 
@@ -73,7 +81,9 @@
 			}
 		}
 	</script>
-
+	<footer id="team" class="text-center navbar-fixed-bottom">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 </body>
 
 </html>

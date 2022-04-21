@@ -13,7 +13,7 @@
 	content="Resume - Responsive HTML5 Template design & developed by www.sharojit.com from the house of www.themesplugin.com">
 <meta name="author" content="www.themesplugin.com">
 
-
+	<title>Dashboard | JobSeek</title>
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script
@@ -30,6 +30,13 @@
 
 <!-- Theme Stylesheet -->
 <style>
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 html {
 	font-size: 100%;
 	background: #d9d9d9;
@@ -844,21 +851,21 @@ a.stp-back-totop {
 
 		<div class="container-fluid">
 
-			<nav class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="navbar navbar-inverse navbar-fixed-top" style="font-size: 15px">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+						<a class="navbar-brand" href="/findjobs">JobSeek</a>
 					</div>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#team">Team</a></li>
+						<li class="active"><li><a href="#">Dashboard</a></li></li>
 
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">logged in as
 								${company.companyName} <span class="caret"></span>
 						</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Profile</a></li>
-								<li><a href="jobsearch.jsp">Search Jobs</a></li>
+<%--								<li><a href="#">Profile</a></li>--%>
+<%--								<li><a href="jobsearch.jsp">Search Jobs</a></li>--%>
 								<li><a href="/findjobs">Logout</a></li>
 							</ul></li>
 					</ul>
@@ -888,7 +895,7 @@ a.stp-back-totop {
 					<!-- user bio -->
 					<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 stp-user-bio">
 						<h1>${company.companyName}</h1>
-						<p>HEADQUATERS: ${company.headquarters}</p>
+						<p style="font-size: large">HEADQUATERS: ${company.headquarters}</p>
 
 
 
@@ -951,7 +958,7 @@ a.stp-back-totop {
 						<div class="row">
 							<div class="col-lg-12 col-xs-12">
 								<div class="stp-jobs">
-									<p class="stp-job-time">${company.description}</p>
+									<p style="font-size: large" class="stp-job-time">${company.description}</p>
 
 
 								</div>
@@ -977,15 +984,17 @@ a.stp-back-totop {
 		</section>
 	</div>
 
-	<div id="team" class="container-fluid text-center">
-		<h1>Team:</h1>
-		<p>Amay</p>
-		<p>Ashay</p>
-		<p>Avdeep</p>
-		<p>Surendra</p>
-		<p>Surendra</p>
-	</div>
-
+<%--	<div id="team" class="container-fluid text-center">--%>
+<%--		<h1>Team:</h1>--%>
+<%--		<p>Amay</p>--%>
+<%--		<p>Ashay</p>--%>
+<%--		<p>Avdeep</p>--%>
+<%--		<p>Surendra</p>--%>
+<%--		<p>Surendra</p>--%>
+<%--	</div>--%>
+	<footer id="team" class="text-center navbar-fixed-bottom">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 
 </body>
 </html>

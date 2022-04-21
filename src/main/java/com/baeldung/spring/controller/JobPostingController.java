@@ -19,6 +19,9 @@ import com.baeldung.spring.dao.JobPostingDao;
 import com.baeldung.spring.entity.Company;
 import com.baeldung.spring.entity.JobPosting;
 
+import javax.management.Query;
+import javax.persistence.EntityManager;
+
 /**
  * @author surendra
  *

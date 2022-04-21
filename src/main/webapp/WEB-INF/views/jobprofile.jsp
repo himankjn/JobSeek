@@ -7,7 +7,7 @@
 <head>
 <!-- Basic -->
 <meta charset="utf-8">
-<title>Job Profile</title>
+<title>Job Profile | JobSeek</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="keywords"
@@ -867,6 +867,14 @@ a.stp-back-totop {
 		margin-bottom: 5px;
 	}
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
+
 </style>
 
 
@@ -881,16 +889,17 @@ a.stp-back-totop {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#team">Team</a></li>
+				<ul class="nav navbar-nav navbar-right" style="font-size: 15px">
+					<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
 
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">logged in as ${company.companyName}
-							<span class="caret"></span></a>
+											data-toggle="dropdown" href="#">logged in as
+						${company.companyName} <span class="caret"></span>
+					</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
+							<%--<li><a href="/company/profile/${company.companyId}">Profile</a></li>--%>
 							<li><a href="/findjobs">Logout</a></li>
 						</ul></li>
 				</ul>
@@ -899,36 +908,38 @@ a.stp-back-totop {
 	</div>
 
 
-	<div class="jumbotron">
-			<div class="container text-center">
+	<div class="container text-center">
+		<img src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/497_449074_management.hero.jpg" width="40%" style="margin-top: 3%">
+		<h2>Job Profile</h2>
+<%--			<div class="container text-center">--%>
 
 
-				<h2>Job Profile</h2>
-				
-			</div>
-		</div>
+<%--				<h2>Job Profile</h2>--%>
+<%--				--%>
+<%--			</div>--%>
+	</div>
 	
 	<header id="stp-header">
 		<div class="container">
-		<div class="row " style="margin: auto">
-					<form class="" action="/company/showapplicants" method="get">
-						<input type="hidden" name="jobId" value="${job.jobId}"></input>
+			<div class="row " style="margin: auto">
+						<form class="" action="/company/showapplicants" method="get">
+							<input type="hidden" name="jobId" value="${job.jobId}"></input>
 
-						<button type="submit" class="btn btn-block btn-primary">View all job applicants for this job</button>
-					</form>
+							<button type="submit" class="btn btn-block btn-primary" style="font-size: 20px">View all job applicants for this job</button>
+						</form>
 
 
-				</div>
+			</div>
 			<div class="row">
 
 
 
 				<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 stp-user-bio">
 					<h1>${job.title}</h1>
-					<h3>${job.location}</h3>
+					<h2>${job.location}</h2>
 					<br>
-					<h3>Posted by: ${company.companyName}</h3>
-					<h3>
+					<h2>Posted by: ${company.companyName}</h2>
+					<h2>
 						Status:
 						<c:if test="${job.state == 0}">	
 							<c:out value="Open" />
@@ -941,32 +952,35 @@ a.stp-back-totop {
 						</c:if>
 						
 						
-							</h3>
+							</h2>
 							
 							
                     
 					</div>
 
 					<div
-					class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
-						<h3>Salary: </h3>
-						<p>${job.salary}</p>
+					class="col-lg-5 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
+						<h2>Salary: ${job.salary} </h2>
+
 						<br>
 						
-						<h3>Job responsibilities: </h3>
-						<p>${job.responsibilities}</p>
+						<h2>Job responsibilities: ${job.responsibilities}</h2>
+
 
 					</div>
 					<!-- job info -->
 				</div>
 			</div>
-			
-			<div class="col-sm-4">
-				<form action="/JobPosting/update/${job.jobId}" method="get">
-				<input type="hidden" value="${company.companyId}" name="cid">
-				<input type="submit" value="Update job" class="btn btn-default btn-block">
-				</form>
+			<div class="container">
+				<div class="row " style="margin: auto">
+					<form action="/JobPosting/update/${job.jobId}" method="get">
+						<input type="hidden" value="${company.companyId}" name="cid">
+						<button type="submit" class="btn btn-block btn-default" style="font-size: 18px">Update Job</button>
+<%--						<input type="submit" value="Update job" class="btn btn-default btn-block">--%>
+					</form>
+				</div>
 			</div>
+
 		</header>
 		<!-- Header Area End-->
 
@@ -991,7 +1005,7 @@ a.stp-back-totop {
 						<div class="row">
 							<div class="col-lg-12 col-xs-12">
 								<div class="stp-jobs">
-									<p class="stp-job-time">${job.description}</p>
+									<h2 class="stp-job-time">${job.description}</h2>
 
 
 								</div>
@@ -1000,7 +1014,8 @@ a.stp-back-totop {
 						</div>
 						<div class="col-sm-3">
 							<form action="/JobPosting/delete/${job.jobId }">
-							<input type="submit" class="btn btn-danger btn-block" value="Delete Job">
+							<button type="submit" class="btn btn-block btn-danger" style="font-size: 20px">Delete Job</button>
+<%--							<input type="submit" class="btn btn-danger btn-block" value="Delete Job">--%>
 								
 							</form>
 						
@@ -1024,13 +1039,8 @@ a.stp-back-totop {
 		</section>
 </div>
 
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
+	<footer id="team" class="text-center navbar-fixed-bottom">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 </body>
 </html>

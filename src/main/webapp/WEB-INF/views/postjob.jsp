@@ -7,7 +7,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>Search jobs | FindJobs.com</title>
+<title>Search jobs | JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -199,6 +199,13 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 </style>
 
 
@@ -217,30 +224,32 @@ body {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#pagetop">FindJobs.com</a>
+					<a class="navbar-brand" href="#pagetop">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#team">Team</a></li>
+					<li class="active"><li><a href="/company/profile/${company.companyId}">Dashboard</a></li></li>
 
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">logged in as ${company.companyName }
-							<span class="caret"></span></a>
+											data-toggle="dropdown" href="#">logged in as
+						${company.companyName} <span class="caret"></span>
+					</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
-							<li><a href="jobsearch.jsp">Search Jobs</a></li>
-							<li><a href="index.jsp">Logout</a></li>
+							<%--								<li><a href="#">Profile</a></li>--%>
+							<%--								<li><a href="jobsearch.jsp">Search Jobs</a></li>--%>
+							<li><a href="/findjobs">Logout</a></li>
 						</ul></li>
 				</ul>
 			</div>
 		</nav>
 
-		<div class="jumbotron">
-			<div class="container text-center">
+		<div style="margin-top: 3%" class="text-center" >
+			<img src="http://www.pharmatutor.org/images/post-jobs-banner.jpg">
+<%--			<div class="container text-center">--%>
 
 
-				<h2>Post a job</h2>
+<%--				<h2>Post a job</h2>--%>
 
-			</div>
+<%--			</div>--%>
 		</div>
 	<div class="container">
 			
@@ -251,12 +260,12 @@ body {
 						<div class="col-sm-12">
 							<div class="row">
 								<div class="col-sm-4 form-group">
-									<label>Title *</label> <input type="text" name="title" placeholder="Enter title Here.." class="form-control">
+									<label>Title</label> <input type="text" name="title" placeholder="Enter title Here.." class="form-control" required>
 								</div>
 								
 								<div class="col-sm-4 form-group">
-									<label>Location *</label> <input type="text" name="location"
-										placeholder="Enter Location Here.." class="form-control">
+									<label>Location</label> <input type="text" name="location"
+										placeholder="Enter Location Here.." class="form-control" required>
 								</div>
 								<div class="col-sm-4 form-group">
 									<label>Company</label> <input type="text" readonly name="company" value="${company.companyName }" class="form-control">
@@ -270,7 +279,7 @@ body {
 									name="cid" required>
 							</div>
 							<div class="form-group">
-								<label>Responsibilities *</label> <input type="text"
+								<label>Responsibilities</label> <input type="text"
 									placeholder="Enter Responsibilities Here.." class="form-control"
 									name="responsibilities" required>
 							</div>
@@ -282,7 +291,7 @@ body {
 							</div>
 							<div class="form-group">
 							
-								<label><b>Salary *($ p.a.)</b></label> <input type="text"
+								<label><b>Salary($ p.a.)</b></label> <input type="text"
 									placeholder="Enter Salary in $" class="form-control" name="salary"
 									required>
 							</div>
@@ -294,17 +303,7 @@ body {
 				</div>
 			</div>
 		</div>
-		
-		
-		
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
+
 
 	</div>
 	</div>
@@ -320,7 +319,9 @@ window.onclick = function(event) {
     }
 }
 </script>
-
+	<footer id="team" class="text-center navbar-fixed-bottom">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 </body>
 
 </html>
