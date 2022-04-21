@@ -69,7 +69,7 @@ public class JobApplicationController {
 	private EntityManager entityManager;
 
 	//private static String UPLOADED_FOLDER = "C:/";
-
+	private static String UPLOADED_FOLDER = "extrafiles/";
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String applyPage(@RequestParam("userId") String jobSeekerId, @RequestParam("jobId") String jobId,
 			Model model) {
@@ -115,7 +115,7 @@ public class JobApplicationController {
 								+ jp.getCompany().getCompanyName(),
 						"Hi " + js.getFirstName() + " " + js.getLastName()
 								+ ".\n You have successfully completed your application for " + jp.getTitle() + " at "
-								+ jp.getCompany().getCompanyName() + ".\n Regards,\nThe FindJobs Team");
+								+ jp.getCompany().getCompanyName() + ".\n Regards,\nThe JobSeek Team");
 
 				Company company = jp.getCompany();
 				List<?> ij = interestedDao.getAllInterestedJobId(Integer.parseInt(jobSeekerId));
