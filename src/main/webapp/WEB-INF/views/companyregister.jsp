@@ -29,14 +29,6 @@
 	background-color: #3F729B;
 }
 
-#team {
-	margin-top: 10px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	color: #fff;
-	background-color: #2E2E2E;
-}
-
 .jumbotron {
 	margin-bottom: 10px;
 }

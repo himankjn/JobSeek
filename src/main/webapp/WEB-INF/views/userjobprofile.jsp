@@ -16,7 +16,7 @@
 	content="Resume - Responsive HTML5 Template design & developed by www.sharojit.com from the house of www.themesplugin.com">
 <meta name="author" content="www.themesplugin.com">
 
-
+<title>Job Profile | JobSeek</title>
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script
@@ -945,6 +945,13 @@ a.stp-back-totop {
 		margin-bottom: 5px;
 	}
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 </style>
 
 
@@ -960,18 +967,19 @@ a.stp-back-totop {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#team">Team</a></li>
+					<li class="active"><a href="/userprofile/${seeker.jobseekerId}">Dashboard</a></li>
+<%--					<li><a href="/searchjobs?userId=${seeker.jobseekerId}">Search Jobs</a></li>--%>
 
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">logged in as
 							${seeker.firstName} <span class="caret"></span>
 					</a>
 						<ul class="dropdown-menu">
-							<li><a href="/userprofile/${seeker.jobseekerId}">Profile</a></li>
-							<li><a href="/searchjobs?userId=${seeker.jobseekerId}">Search Jobs</a></li>
+<%--							<li><a href="/userprofile/${seeker.jobseekerId}">Profile</a></li>--%>
+<%--							<li><a href="/searchjobs?userId=${seeker.jobseekerId}">Search Jobs</a></li>--%>
 							<li><a href="/findjobs">Logout</a></li>
 						</ul></li>
 				</ul>
@@ -981,16 +989,9 @@ a.stp-back-totop {
 	<div class="container-fluid" style="margin-top: 40px">${message}</div>
 
 	<div class="bod" style="margin-top: 5px">
-		<div class="jumbotron">
-			<div class="container text-center">
-
-
-				<h2>Job Profile</h2>
-
-			</div>
+		<div class="container text-center">
+			<img src="https://pyjamahr.com/wp-content/uploads/2021/09/GoogleDrive_640X469_5-Best-Practices-for-Writing-Great-Job-Descriptions-02-1280x992-2.png" width="40%">
 		</div>
-
-
 		<header id="stp-header">
 			<div class="container">
 				<div class="row">
@@ -1000,8 +1001,8 @@ a.stp-back-totop {
 								<input type="hidden" name="userId"
 									value="${seeker.jobseekerId }"></input> <input type="hidden"
 									name="jobId" value="${job.jobId }"></input> <input
-									type="submit" class="btn btn-lg btn-block btn-primary"
-									value="show interest in this job" />
+									type="submit" class="btn btn-lg btn-block btn-info"
+									value="Add to Interested Jobs" />
 							</form>
 						</c:if>
 						<c:if test="${interested == 1}">
@@ -1010,7 +1011,7 @@ a.stp-back-totop {
 									value="${seeker.jobseekerId }"></input> <input type="hidden"
 									name="jobId" value="${job.jobId }"></input> <input
 									type="submit" class="btn btn-lg btn-block btn-danger"
-									value="remove from interested" />
+									value="Remove From Interested Jobs" />
 							</form>
 						</c:if>
 
@@ -1019,8 +1020,7 @@ a.stp-back-totop {
 					<div class="col-sm-6">
 					<c:if test="${applied == 0}">
 							<button class="btn btn-lg btn-block btn-success"
-								onclick="document.getElementById('id01').style.display='block'">apply
-								for this job</button>
+								onclick="document.getElementById('id01').style.display='block'">Apply For This Job</button>
 						</c:if>
 						<c:if test="${applied == 1}">
 							<button class="btn btn-lg btn-block btn-warning"
@@ -1074,11 +1074,12 @@ a.stp-back-totop {
 
 
 					<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 stp-user-bio">
-						<h1>${job.title}</h1>
-						<h3>${job.location}</h3>
 						<br>
-						<h3>Posted by: ${company.companyName}</h3>
-						<h3>
+						<h1>${job.title}</h1>
+						<h2>${job.location}</h2>
+						<br>
+						<h2>Posted by: ${company.companyName}</h2>
+						<h2>
 							Status:
 							<c:if test="${job.state == 0}">
 								<c:out value="Open" />
@@ -1092,20 +1093,18 @@ a.stp-back-totop {
 
 
 
-						</h3>
+						</h2>
 
 
 
 					</div>
 
-					<div
-						class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
-						<h3>Salary:</h3>
-						<p>$ ${job.salary}</p>
+					<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
+						<h2>Salary:</h2>
+						<h2>$ ${job.salary}</h2>
 						<br>
-
-						<h3>Job responsibilities:</h3>
-						<p>${job.responsibilities}</p>
+						<h2>Job responsibilities:</h2>
+						<h2>${job.responsibilities}</h2>
 
 					</div>
 					<!-- job info -->
@@ -1135,7 +1134,7 @@ a.stp-back-totop {
 						<div class="row">
 							<div class="col-lg-12 col-xs-12">
 								<div class="stp-jobs">
-									<p class="stp-job-time">${job.description}</p>
+									<h4 class="stp-job-time">${job.description}</h4>
 
 
 								</div>
@@ -1161,14 +1160,9 @@ a.stp-back-totop {
 		</section>
 	</div>
 
-	<div id="team" class="container-fluid text-center">
-		<h1>Team:</h1>
-		<p>Amay</p>
-		<p>Ashay</p>
-		<p>Avdeep</p>
-		<p>Surendra</p>
-		<p>Surendra</p>
-	</div>
+	<footer id="team" class="text-center">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 	
 	<script>
 		// Get the modal

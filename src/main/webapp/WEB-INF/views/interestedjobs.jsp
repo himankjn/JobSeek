@@ -9,7 +9,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>Search jobs | FindJobs.com</title>
+<title>Interested jobs | FindJobs.com</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->

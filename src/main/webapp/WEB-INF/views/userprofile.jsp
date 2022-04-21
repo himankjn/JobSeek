@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <!-- Basic -->
-<title>User Profile</title>
+<title>User Profile | JobSeek</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
@@ -865,6 +865,13 @@ a.stp-back-totop {
 		margin-bottom: 5px;
 	}
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 </style>
 
 
@@ -879,10 +886,10 @@ a.stp-back-totop {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#team">Team</a></li>
+					<li class="active"><a href="#">Dashboard</a></li>
 
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">logged in as
@@ -933,6 +940,7 @@ a.stp-back-totop {
 					<!-- user bio -->
 					<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 stp-user-bio">
 						<h1>${ seeker.firstName}${seeker.lastName }</h1>
+						<br>
 						<form action="/register/verify" method="get">
 							<input type="hidden" name="userId" value="${seeker.jobseekerId}"></input>
 
@@ -941,21 +949,14 @@ a.stp-back-totop {
 							<button type="submit" class="btn btn-primary">Update
 								Profile</button>
 						</form>
-
-
-
-
-
 					</div>
 
 					<div
 						class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
-						<h3>Email:</h3>
-						<p>
+						<h2>Email:</h2>
+						<h2>
 							<a>${seeker.emailId}</a>
-						</p>
-
-
+						</h2>
 					</div>
 					<!-- user info -->
 				</div>
@@ -1016,7 +1017,7 @@ a.stp-back-totop {
 						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 stp-content">
 
 							<div class="skill">
-								<div class="">${seeker.skills }</div>
+								<div class=""><h2>${seeker.skills }</h2></div>
 							</div>
 						</div>
 					</div>
@@ -1071,14 +1072,9 @@ a.stp-back-totop {
 		</section>
 	</div>
 
-	<div id="team" class="container-fluid text-center">
-		<h1>Team:</h1>
-		<p>Amay</p>
-		<p>Ashay</p>
-		<p>Avdeep</p>
-		<p>Surendra</p>
-		<p>Surendra</p>
-	</div>
+	<footer id="team" class="text-center">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 
 
 </body>
