@@ -35,6 +35,7 @@ public interface JobApplicationDao {
 	JobApplication getJobApplication(int jobAppId);
 
 	List<?> getJobApplicationsbyjobId(int jobId);
+	List<?> getJobApplicationsbyjobIdAndUserId(int jobId,int userId);
 	/**
 	 * @param state
 	 * @return Modified job application

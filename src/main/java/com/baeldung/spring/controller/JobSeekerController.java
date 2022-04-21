@@ -15,6 +15,7 @@ import java.util.Optional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import com.baeldung.spring.dao.*;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -27,10 +28,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.baeldung.spring.dao.CompanyDao;
-import com.baeldung.spring.dao.InterestedDao;
-import com.baeldung.spring.dao.JobPostingDao;
-import com.baeldung.spring.dao.JobSeekerDao;
 import com.baeldung.spring.dao.impl.JobSeekerDaoImpl;
 import com.baeldung.spring.entity.Company;
 import com.baeldung.spring.entity.Interested;
@@ -57,6 +54,9 @@ public class JobSeekerController {
 	
 	@Autowired
 	InterestedDao interestedDao;
+
+	@Autowired
+	JobApplicationDao jobApplicationDao;
 
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -493,13 +493,16 @@ public class JobSeekerController {
 				}
 
 				String message="<div class=\"alert alert-danger\">This job has been <strong>Successfully removed</strong> from your interests</div>";
-				
+				List<?> jobapps= jobApplicationDao.getJobApplicationsbyjobIdAndUserId(Integer.parseInt(jobId),Integer.parseInt(userId));
+
 				model.addAttribute("job", job);
 				model.addAttribute("seeker", seeker);
 				model.addAttribute("company", company);
 				model.addAttribute("interested", i);
 				model.addAttribute("message", message);
-				model.addAttribute("applied", 1);
+				if(jobapps.size()==0)
+					model.addAttribute("applied", 0);
+				else model.addAttribute("applied", 1);
 				
 				
 				return "userjobprofile";
