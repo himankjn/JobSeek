@@ -7,7 +7,7 @@
 <head>
 <!-- Basic -->
 <meta charset="utf-8">
-<title>Job Applicants </title>
+<title>Job Applicants | JobSeek</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="keywords"
@@ -867,6 +867,13 @@ a.stp-back-totop {
 		margin-bottom: 5px;
 	}
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 </style>
 
 
@@ -881,16 +888,17 @@ a.stp-back-totop {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#team">Team</a></li>
+					<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
 
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">logged in as ${company.companyName}
-							<span class="caret"></span></a>
+											data-toggle="dropdown" href="#">logged in as
+						${company.companyName} <span class="caret"></span>
+					</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
+							<%--								<li><a href="/company/profile/${company.companyId}">Profile</a></li>--%>
 							<li><a href="/findjobs">Logout</a></li>
 						</ul></li>
 				</ul>
@@ -899,97 +907,57 @@ a.stp-back-totop {
 	</div>
 
 
-	<div class="jumbotron">
-			<div class="container text-center">
-
-
-				<h2>Job Applicants</h2>
-				
-			</div>
-		</div>
+	<div style="margin-top: 3%" class="text-center">
+			<img src="https://i1.wp.com/hr-gazette.com/wp-content/uploads/2016/12/Hiring.jpg?fit=1200%2C738&ssl=1&resize=350%2C200">
+			<h1>Job Applicants</h1>
+	</div>
 	
 	<header id="stp-header">
 		<div class="container">
 		<div class="row " style="margin: auto">
-
-
-				</div>
-			<div class="row">
-
-
-
-				<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 stp-user-bio">
-					<h1><a class="a1" href="/company/showjob?cid=${companyId}&jobId=${job.jobId}">${job.title}</a></h1>
-					<h3>${job.location}</h3>
-					<br>
-					<h3>Posted by: ${job.company.companyName}</h3>
-					<h3>
-						Status:
-						<c:if test="${job.state == 0}">	
-							<c:out value="Open" />
-						</c:if>
-						<c:if test="${job.state == 1}">	
-							<c:out value="Filled" />
-						</c:if>
-						<c:if test="${job.state == 2}">	
-							<c:out value="Cancelled" />
-						</c:if>
-						
-						
-					</h3>
-
-
-					<%--<c:forEach items="${jobapps}" var="jobapp">
-						<div class="row">
-							<div class="col-sm-4 groups">
-								<p>
-									<b>Applicant Name:</b> ${jobapp[9]}
-								</p>
-							</div>
-						</div>
-					</c:forEach>--%>
-
-					<c:forEach items="${jobapps}" var="jobapp">
-
-						<div class="row">
-
-							<div class="col-sm-8">
-								<b><a class="a1" href="/userprofile/${jobapp[8]}">${jobapp[9]} ${jobapp[10]}</a></b>
-							</div>
-								<div class="col-sm-8">
-									<form action="/application/userjobapplication" method="post">
-										<input type="hidden" name="appId" value="${jobapp[0]}"></input>
-										<input type="hidden" name="userId" value="${jobapp[8]}"></input>
-										<input type="hidden" name="jobId" value="${jobapp[11]}"></input>
-										<button type="submit" class="btn btn-block btn-primary">Application Status</button>
-									</form>
-
-								</div>
-						</div>
-						<hr />
-					</c:forEach>
-                    
+			</div>
+				<div class="row">
+					<div class="col-lg-12 text-center  stp-heading text-center">
+						<h1 class="stp-title"><a class="a1" href="/company/showjob?cid=${companyId}&jobId=${job.jobId}">${job.title}</a></h1>
+					</div>
+					<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 stp-user-bio">
+						<h2>Location: ${job.location}</h2>
+						<br>
+<%--						<h2>Posted by: ${job.company.companyName}</h2>--%>
+						<h2>
+							Status: <c:if test="${job.state == 0}">
+										<c:out value="Open" />
+									</c:if>
+									<c:if test="${job.state == 1}">
+										<c:out value="Filled" />
+									</c:if>
+									<c:if test="${job.state == 2}">
+										<c:out value="Cancelled" />
+									</c:if>
+						</h2>
 					</div>
 
-					<div
-					class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
-						<h3>Salary: </h3>
-						<p>${job.salary}</p>
+					<div class="col-lg-5 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
+						<h2>Salary: ${job.salary}</h2>
 						<br>
-						
-						<h3>Job responsibilities: </h3>
-						<p>${job.responsibilities}</p>
-
+						<h2>Job responsibilities: ${job.responsibilities}</h2>
+					</div>
+					<div class="col-lg-12 col-md-3 col-sm-12 col-xs-12">
+						<h2 >JOB DESCRIPTION: ${job.description}</h2>
 					</div>
 					<!-- job info -->
+					<div class="col-lg-6">
+						<form action="/JobPosting/update/${job.jobId}" method="get">
+							<input type="hidden" value="${company.companyId}" name="cid">
+							<input type="submit" value="Update job" class="btn btn-default btn-block">
+						</form>
+					</div>
+					<div class="col-lg-6">
+						<form action="/JobPosting/delete/${job.jobId }">
+							<input type="submit" class="btn btn-danger btn-block" value="Delete Job">
+						</form>
+					</div>
 				</div>
-			</div>
-			
-			<div class="col-sm-4">
-				<form action="/JobPosting/update/${job.jobId}" method="get">
-				<input type="hidden" value="${company.companyId}" name="cid">
-				<input type="submit" value="Update job" class="btn btn-default btn-block">
-				</form>
 			</div>
 		</header>
 		<!-- Header Area End-->
@@ -997,64 +965,34 @@ a.stp-back-totop {
 		<!-- Content Area Start -->
 		<section id="stp-content-area">
 			<div class="container">
-
-
-
-
-
-
-				<div class="row">
-					<!-- Heading -->
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 stp-heading">
-						<h4 class="stp-title">JOB DESCRIPTION</h4>
-					</div>
-					<!-- Heading -->
-					<!-- Content -->
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 stp-content">
-						<!-- job widget -->
+				<div class="col-lg-12 col-md-3 col-sm-12 col-xs-12 stp-heading text-center">
+					<h1 class="stp-title">Job Applicants List</h1>
+				</div>
+				<h2>Search Results: ${jobapplen}</h2>
+					<c:forEach items="${jobapps}" var="jobapp">
 						<div class="row">
-							<div class="col-lg-12 col-xs-12">
-								<div class="stp-jobs">
-									<p class="stp-job-time">${job.description}</p>
-
-
-								</div>
+							<div class="col-lg-6">
+<%--								<h3><a class="a1" href="/userprofile/${jobapp[8]}">${jobapp[9]} ${jobapp[10]}</a></h3>--%>
+									<h3>${jobapp[9]} ${jobapp[10]}</h3>
+							</div>
+							<div class="col-lg-6">
+								<form action="/application/userjobapplication" method="post">
+									<input type="hidden" name="appId" value="${jobapp[0]}"></input>
+									<input type="hidden" name="userId" value="${jobapp[8]}"></input>
+									<input type="hidden" name="jobId" value="${jobapp[11]}"></input>
+									<button type="submit" style="color: black" class="btn btn-block btn-info">Application Status</button>
+								</form>
 							</div>
 						</div>
-						</div>
-						<div class="col-sm-3">
-							<form action="/JobPosting/delete/${job.jobId }">
-							<input type="submit" class="btn btn-danger btn-block" value="Delete Job">
-								
-							</form>
-						
-
-					</div>
-					<!-- Content -->
+						<hr />
+					</c:forEach>
 				</div>
 				<!-- Recent Jobs -->
-
-
-
-
-
-
-
-
-
-
-
-			</div>
 		</section>
 </div>
 
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
-		</div>
+	<footer id="team" class="text-center">
+		<p> &copy; 2022 JobSeek Company</p>
+	</footer>
 </body>
 </html>

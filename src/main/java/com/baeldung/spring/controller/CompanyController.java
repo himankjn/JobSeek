@@ -73,6 +73,7 @@ public class CompanyController {
 		int companyId=jobDao.getJobPosting(Integer.parseInt(jobId)).getCompany().getCompanyId();
 		model.addAttribute	("job", p1);
 		model.addAttribute("jobapps",Ja);
+		model.addAttribute("jobapplen",Ja.size());
 		model.addAttribute("companyId",companyId);
 		return "jobapplicants";
 	}
