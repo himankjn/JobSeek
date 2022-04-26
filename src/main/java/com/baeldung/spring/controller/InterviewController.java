@@ -7,7 +7,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+import org.springframework.core.env.Environment;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -48,6 +48,8 @@ public class InterviewController {
 	@PersistenceContext
 	private EntityManager entityManager;
 
+	@Autowired
+	private Environment env;
 	@RequestMapping(value = "/createinterview", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public ResponseEntity<?> createInterview(@RequestParam("appId") String appId,
@@ -60,7 +62,7 @@ public class InterviewController {
 		ja.setInterviewTime(Date.valueOf(datetime));
 		ja.setInterviewAccepted(false);
 		jobAppDao.updateApplication(ja);
-		String verificationUrl = "http://localhost:8095/acceptinterview?jobseekerid=" + ja.getAppId();
+		String verificationUrl = "http://localhost:"+env.getProperty("port")+"/acceptinterview?jobseekerid=" + ja.getAppId();
 		System.out.println("interview created");
 		emailService.sendSimpleMessage(jobSeeker.getEmailId(), "Interview call",
 				"Hi " + jobSeeker.getFirstName() + " " + jobSeeker.getLastName()

@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import org.springframework.core.env.Environment;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -167,6 +168,8 @@ public class JobSeekerController {
 	 * @throws IOException
 	 * @throws SQLException
 	 */
+	@Autowired
+	private Environment env;
 	@RequestMapping(value = "/createuser", method = RequestMethod.POST)
 	public String createJobSeeker(@RequestParam("name") String name, @RequestParam("email") String email,
 			@RequestParam("password") String password, @RequestParam("type") String type, Model model)
@@ -203,7 +206,7 @@ public class JobSeekerController {
 
 				JobSeeker j1 = jobSeekerDao.createJobSeeker(j);
 
-				String verificationUrl = "http://localhost:8095/register/verify?userId=" + j1.getJobseekerId() + "&pin="
+				String verificationUrl = "http://localhost:"+env.getProperty("port")+"/register/verify?userId=" + j1.getJobseekerId() + "&pin="
 						+ randomPIN + "&type=seeker";
 
 				emailService.sendSimpleMessage(email, "Verification Pin", verificationUrl);
@@ -234,7 +237,7 @@ public class JobSeekerController {
 
 				Company c1 = companyDao.createCompany(c);
 
-				String verificationUrl = "http://localhost:8095/register/verify?userId=" + c1.getCompanyId() + "&pin="
+				String verificationUrl = "http://localhost:"+env.getProperty("port")+"/register/verify?userId=" + c1.getCompanyId() + "&pin="
 						+ randomPIN + "&type=recruiter";
 
 

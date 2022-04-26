@@ -1,5 +1,6 @@
 package com.baeldung.spring.config;
 
+import java.sql.DriverManager;
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -53,7 +54,10 @@ public class DatabaseConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(env.getProperty("db.driver"));
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+
+		System.out.println("hellow himank");
+
 		dataSource.setUrl(env.getProperty("db.url"));
 		dataSource.setUsername(env.getProperty("db.username"));
 		dataSource.setPassword(env.getProperty("db.password"));

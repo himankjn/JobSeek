@@ -23,7 +23,6 @@ import com.baeldung.spring.mail.EmailServiceImpl;
  *
  */
 @Controller
-
 @RequestMapping(value = "/")
 public class MainController {
 
