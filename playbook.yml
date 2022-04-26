@@ -13,9 +13,5 @@
         dest: ./docker-compose.yml
         owner: himank
         group: himank
-        mode: 0644
+        mode: 0644		      
 
-    
-        		      
-#    - name: running container
-#      shell: docker run -it -d himankjn/jobportal
