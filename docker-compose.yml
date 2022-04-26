@@ -3,7 +3,7 @@ version: "2.1"
 services:
   mysql-jobportal:
     container_name: mysql-jobportal
-    image: "mysql"
+    image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=jobportal

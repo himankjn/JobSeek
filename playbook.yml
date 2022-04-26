@@ -7,12 +7,15 @@
       service:
         name: docker
         state: started
-        
-    - name: pull docker image
-      shell: docker pull himankjn/jobportal
-      
-    - name: pull mysql image
-      shell: docker pull mysql
-		      
-    - name: running container
-      shell: docker run -it -d himankjn/jobportal
+
+    - copy:
+        src: docker-compose.yml
+        dest: ./docker-compose.yml
+        owner: himank
+        group: himank
+        mode: 0644
+
+    
+        		      
+#    - name: running container
+#      shell: docker run -it -d himankjn/jobportal
