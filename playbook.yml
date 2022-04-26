@@ -13,8 +13,11 @@
         dest: ./docker-compose.yml
         owner: himank
         group: himank
-        mode: 0644		      
+        mode: 0644
 
-    - name: running the docker-compose.yml file
-      ansible.builtin.shell: docker-compose -f docker-compose.yml up
+    - name: deploy Docker Compose
+      docker_compose:
+        project_src: ./
+        files:
+          - docker-compose.yml
 
