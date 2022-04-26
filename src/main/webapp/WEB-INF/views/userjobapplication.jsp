@@ -7,7 +7,7 @@
 <head>
 <!-- Basic -->
 <meta charset="utf-8">
-<title>Job Applicants </title>
+<title>Job Applicant Status | JobSeek</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="keywords"
@@ -867,6 +867,13 @@ a.stp-back-totop {
 		margin-bottom: 5px;
 	}
 }
+#team {
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
 </style>
 
 
@@ -881,17 +888,17 @@ a.stp-back-totop {
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#team">Team</a></li>
+					<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
 
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">logged in as amazon
-<%--						${company.companyName}--%>
-							<span class="caret"></span></a>
+											data-toggle="dropdown" href="#">logged in as
+						${company.companyName} <span class="caret"></span>
+					</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
+							<%--								<li><a href="/company/profile/${company.companyId}">Profile</a></li>--%>
 							<li><a href="/findjobs">Logout</a></li>
 						</ul></li>
 				</ul>
@@ -904,7 +911,7 @@ a.stp-back-totop {
 			<div class="container text-center">
 
 
-				<h1>Job Application</h1>
+				<h1>Job Application Status</h1>
 <%--				//jobapp--%>
 <%--				//user--%>
 <%--				//job--%>
