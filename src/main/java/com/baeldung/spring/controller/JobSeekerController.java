@@ -86,9 +86,11 @@ public class JobSeekerController {
 		System.out.println("here");
 		List<?> jobIds = jobSeekerDao.searchJobs(search);
 		if(jobIds.size()==0){
-			System.out.println("wow yo");
 			String message="<div class=\"alert alert-danger\">No jobs available as per your requirements at the moment!</div>";
 			model.addAttribute("message",message);
+
+			JobSeeker js=jobSeekerDao.getJobSeeker(Integer.parseInt(userId));
+			model.addAttribute("seeker", js);
 			return "userprofile";
 		}
 

@@ -89,7 +89,6 @@ public class MainController {
 			list = jobSeekerDao.PasswordLookUp(email);
 			if (list.size() == 0) {
 				model.addAttribute("message", message);
-				
 				return "index";
 			} else {
 				if (pwd.equals(list.get(0))) {
