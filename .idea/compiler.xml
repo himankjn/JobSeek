@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jobboard" />
         <module name="spring-job-portal (copy)" />
         <module name="spring-job-portal" />
+        <module name="MajorProj" />
+        <module name="jobboard" />
       </profile>
     </annotationProcessing>
   </component>
