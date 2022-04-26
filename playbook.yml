@@ -1,5 +1,5 @@
 ---
-- name: Pull docker image of Calculator
+- name: dockercompose for mysql and backend frontend
   hosts: all
   tasks:
 
@@ -14,4 +14,7 @@
         owner: himank
         group: himank
         mode: 0644		      
+
+    - name: running the docker-compose.yml file
+      ansible.builtin.shell: docker-compose -f docker-compose.yml up
 
