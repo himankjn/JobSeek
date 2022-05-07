@@ -227,7 +227,10 @@ body {
 					<a class="navbar-brand" href="#pagetop">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><li><a href="/company/profile/${company.companyId}">Dashboard</a></li></li>
+					<form id="dashform" method="post" action="/company/profile">
+						<input type="hidden" name="id" value="${company.companyId}"></input>
+					</form>
+					<li class="active"><a onclick="document.getElementById('dashform').submit();">Dashboard</a></li>
 
 					<li class="dropdown"><a class="dropdown-toggle"
 											data-toggle="dropdown" href="#">logged in as
@@ -255,7 +258,7 @@ body {
 			
 			<div class="col-lg-12 well">
 				<div class="row">
-					<form action="/JobPosting" method="post">
+					<form action="/JobPosting/jobprofile" method="post">
 						
 						<div class="col-sm-12">
 							<div class="row">

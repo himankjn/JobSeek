@@ -892,7 +892,11 @@ a.stp-back-totop {
 					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right" style="font-size: 15px">
-					<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
+					<form id="dashform" method="post" action="/company/profile">
+						<input type="hidden" name="id" value="${company.companyId}"></input>
+					</form>
+					<li class="active"><a onclick="document.getElementById('dashform').submit();">Dashboard</a></li>
+
 
 					<li class="dropdown"><a class="dropdown-toggle"
 											data-toggle="dropdown" href="#">logged in as
@@ -922,9 +926,8 @@ a.stp-back-totop {
 	<header id="stp-header">
 		<div class="container">
 			<div class="row " style="margin: auto">
-						<form class="" action="/company/showapplicants" method="get">
+						<form class="" action="/company/showapplicants" method="post">
 							<input type="hidden" name="jobId" value="${job.jobId}"></input>
-
 							<button type="submit" class="btn btn-block btn-primary" style="font-size: 20px">View all job applicants for this job</button>
 						</form>
 
@@ -973,7 +976,8 @@ a.stp-back-totop {
 			</div>
 			<div class="container">
 				<div class="row " style="margin: auto">
-					<form action="/JobPosting/update/${job.jobId}" method="get">
+					<form action="/JobPosting/update" method="post">
+						<input type="hidden" value="${job.jobId}" name="id">
 						<input type="hidden" value="${company.companyId}" name="cid">
 						<button type="submit" class="btn btn-block btn-default" style="font-size: 18px">Update Job</button>
 <%--						<input type="submit" value="Update job" class="btn btn-default btn-block">--%>
@@ -1012,8 +1016,9 @@ a.stp-back-totop {
 							</div>
 						</div>
 						</div>
-						<div class="col-sm-3">
-							<form action="/JobPosting/delete/${job.jobId }">
+						<div class="col-ssm-3">
+							<form action="/JobPosting/delete" method="post">
+								<input type="hidden" value="${job.jobId}" name="id">
 							<button type="submit" class="btn btn-block btn-danger" style="font-size: 20px">Delete Job</button>
 <%--							<input type="submit" class="btn btn-danger btn-block" value="Delete Job">--%>
 								

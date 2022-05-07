@@ -922,7 +922,7 @@ a.stp-back-totop {
 						</form>
 					</div>
 					<div class="col-sm-6">
-						<form action="/getinterestedjobs" method="get">
+						<form action="/getinterestedjobs" method="post">
 						
 							<input type="hidden" name="jobSeekerId" value="${seeker.jobseekerId}"></input>
 							<input type="submit" class="btn btn-lg btn-block btn-success"
@@ -940,13 +940,12 @@ a.stp-back-totop {
 					<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 stp-user-bio">
 						<h1>${ seeker.firstName}${seeker.lastName }</h1>
 						<br>
-						<form action="/register/verify" method="get">
+						<form action="/register/verify" method="post">
 							<input type="hidden" name="userId" value="${seeker.jobseekerId}"></input>
 
 							<input type="hidden" name="pin" value="${seeker.verificationCode}"></input> 
 								<input type="hidden" name="type" value="seeker"></input>
-							<button type="submit" class="btn btn-primary">Update
-								Profile</button>
+							<button type="submit" class="btn btn-primary">Update Profile</button>
 						</form>
 					</div>
 

@@ -907,22 +907,18 @@ a.stp-back-totop {
 					<div
 						class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
 
-						<form action="/register/verify" method="get">
+						<form action="/register/verify" method="post">
 							<input type="hidden" name="userId" value="${company.companyId}"></input>
-
 							<input type="hidden" name="pin"
 								value="${company.verificationCode}"></input> <input
 								type="hidden" name="type" value="recruiter"></input>
 
-							<button type="submit" class="btn btn-block btn-default">Update
-								Profile</button>
+							<button type="submit" class="btn btn-block btn-default">Update Profile</button>
 						</form>
 						<br>
-						<form action="/JobPosting" method="get">
+						<form action="/JobPosting/postajob" method="post">
 							<input type="hidden" name="cid" value="${company.companyId}"></input>
-
-							<button type="submit" class="btn btn-block btn-primary">Post
-								a Job</button>
+							<button type="submit" class="btn btn-block btn-primary">Post a Job</button>
 						</form>
 
 					</div>
@@ -937,11 +933,9 @@ a.stp-back-totop {
 			<div class="container">
 
 				<div class="row " style="margin: auto">
-					<form class="" action="/company/getjobs" method="get">
+					<form class="" action="/company/getjobs" method="post">
 						<input type="hidden" name="companyId" value="${company.companyId}"></input>
-
-						<button type="submit" class="btn btn-block btn-primary">Jobs
-							posted by you</button>
+						<button type="submit" class="btn btn-block btn-primary">Jobs posted by you</button>
 					</form>
 
 

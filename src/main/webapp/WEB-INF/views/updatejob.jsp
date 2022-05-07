@@ -221,7 +221,11 @@ body {
 					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="/company/showjob?cid=${company.companyId}&jobId=${job.jobId}">Job Profile</a></li>
+					<form id="dashform" method="post" action="/company/showjob">
+						<input type="hidden" name="cid" value="${company.companyId}"></input>
+						<input type="hidden" name="jobId" value="${job.jobId}"></input>
+					</form>
+					<li class="active"><a onclick="document.getElementById('dashform').submit();">Cancel</a></li>
 
 					<li class="dropdown"><a class="dropdown-toggle"
 											data-toggle="dropdown" href="#">logged in as
@@ -248,8 +252,8 @@ body {
 
 			<div class="col-lg-12 well">
 				<div class="row">
-					<form action="/JobPosting/update/${job.jobId}" method="post">
-
+					<form action="/JobPosting/jobprofile" method="post">
+						<input type="hidden" value="${job.jobId}" name="id">
 						<div class="col-sm-12">
 							<div class="row">
 								<div class="col-sm-4 form-group">

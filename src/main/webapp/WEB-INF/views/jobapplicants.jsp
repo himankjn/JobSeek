@@ -891,7 +891,11 @@ a.stp-back-totop {
 					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
+					<form id="dashform" method="post" action="/company/profile">
+						<input type="hidden" name="id" value="${company.companyId}"></input>
+					</form>
+					<li class="active"><a onclick="document.getElementById('dashform').submit();">Dashboard</a></li>
+
 
 					<li class="dropdown"><a class="dropdown-toggle"
 											data-toggle="dropdown" href="#">logged in as
@@ -947,13 +951,15 @@ a.stp-back-totop {
 					</div>
 					<!-- job info -->
 					<div class="col-lg-6">
-						<form action="/JobPosting/update/${job.jobId}" method="get">
+						<form action="/JobPosting/update" method="post">
+							<input type="hidden" value="${job.jobId}" name="id">
 							<input type="hidden" value="${company.companyId}" name="cid">
 							<input type="submit" value="Update job" class="btn btn-default btn-block">
 						</form>
 					</div>
 					<div class="col-lg-6">
-						<form action="/JobPosting/delete/${job.jobId }">
+						<form action="/JobPosting/delete" method="post">
+							<input type="hidden" value="${job.jobId}" name="id">
 							<input type="submit" class="btn btn-danger btn-block" value="Delete Job">
 						</form>
 					</div>

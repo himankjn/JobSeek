@@ -215,7 +215,12 @@ body {
 					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="/userprofile/${seeker.jobseekerId}">Dashboard</a></li>
+
+					<form id="dashform" method="post" action="/userprofile">
+						<input type="hidden" name="id" value="${seeker.jobseekerId}"></input>
+					</form>
+					<li class="active"><a onclick="document.getElementById('dashform').submit();">Dashboard</a></li>
+
 
 					<li class="dropdown"><a class="dropdown-toggle"
 											data-toggle="dropdown" href="#">logged in as
@@ -276,7 +281,12 @@ body {
 			
 
 			<c:forEach items="${jobs}" var="job">
-				<a class="a1" href="/showjob?userId=${seeker.jobseekerId}&jobId=${job[0]}">${job[1]}</a>
+				<form id="showjobform" method="post" action="/showjob">
+					<input type="hidden" name="jobId" value="${job[0]}"></input>
+					<input type="hidden" name="userId" value="${seeker.jobseekerId}"></input>
+				</form>
+				<h4><b><li class="active"><a onclick="document.getElementById('showjobform').submit();">${job[1]}</a></li></b></h4>
+
 				<div class="row">
 					<div class="col-sm-4 groups">
 						<p>

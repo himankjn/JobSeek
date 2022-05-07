@@ -212,7 +212,10 @@ body {
 				<a class="navbar-brand" href="/findjobs">JobSeek</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="/userprofile/${seeker.jobseekerId}">Dashboard</a></li>
+				<form id="dashform" method="post" action="/userprofile">
+					<input type="hidden" name="id" value="${seeker.jobseekerId}"></input>
+				</form>
+				<li class="active"><a onclick="document.getElementById('dashform').submit();">Dashboard</a></li>
 
 				<li class="dropdown"><a class="dropdown-toggle"
 										data-toggle="dropdown" href="#">logged in as

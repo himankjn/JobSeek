@@ -891,9 +891,13 @@ a.stp-back-totop {
 					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="/company/profile/${company.companyId}">Dashboard</a></li>
+					<ul class="nav navbar-nav navbar-right">
+						<form id="dashform" method="post" action="/company/profile">
+							<input type="hidden" name="id" value="${company.companyId}"></input>
+						</form>
+						<li class="active"><a onclick="document.getElementById('dashform').submit();">Dashboard</a></li>
 
-					<li class="dropdown"><a class="dropdown-toggle"
+						<li class="dropdown"><a class="dropdown-toggle"
 											data-toggle="dropdown" href="#">logged in as
 						${company.companyName} <span class="caret"></span>
 					</a>

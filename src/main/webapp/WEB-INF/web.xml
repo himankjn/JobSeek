@@ -16,7 +16,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>com.baeldung.spring.config.DatabaseConfig</param-value>
+            <param-value>com.jobseek.spring.config.DatabaseConfig</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

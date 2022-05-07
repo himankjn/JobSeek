@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>JobSeek</title>
+<title>Register | JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -19,10 +19,6 @@
 <!-- Latest compiled JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- <link rel="stylesheet" href="css/style.css">
-   
-<script src="js/script.js"></script>-->
 <style type="text/css">
 #requirements {
 	margin-top: 10px;
@@ -33,15 +29,15 @@
 }
 
 #team {
-	margin-top: 5px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	margin-top: 7.5%;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	color: #fff;
 	background-color: #2E2E2E;
 }
 
 .jumbotron {
-	margin-bottom: 1px;
+	margin-bottom: 10px;
 }
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -183,8 +179,8 @@ to {
 	/*padding-bottom: 100px;*/
 	margin-top: 30px;
 	/*margin-bottom: -100px;*/
-	border-left: 3px solid #B6FFCE;
-	border-right: 3px solid #B6FFCE;
+	border-left: 3px solid #689f38;
+	border-right: 3px solid #689f38;
 }
 
 .row1 {
@@ -198,104 +194,97 @@ to {
 
 body {
 	padding-top: 20px;
-	/*padding-bottom: 10px;*/
+	padding-bottom: 20px;
 }
 </style>
 
+
+
+
 </head>
 
-<body id="pagetop">
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/findjobs">JobSeeker</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid" style="margin-top: 40px">${message1}</div>
+	<div class="container-fluid" style="margin-top: 40px">${message2}</div>
 
 	<div class="container-fluid">
+		<div class="container">
+			<h1 class="well">
+				<strong class="text-center"><img src="https://i.pinimg.com/236x/b0/81/6b/b0816b0277a696f873c3d5db164de0ce.jpg" height="80" width="auto">Account Verification</strong>
+			</h1>
+			<div class="col-lg-12 well">
+				<div class="row">
 
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#pagetop">JobSeek</a>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
-					<li class="active"><a href="/register">New User? Register</a></li>
-				</ul>
-			</div>
-		</nav>
-
-		<div class="container-fluid" style="margin-top: 40px">${message2}</div>
-
-		<div class="jumbotron text-center">
-
-			<img src="https://www.signitysolutions.com/images/services/job-portal/banner.png">
-		</div>
-		<div class="row picture row1">
-			<img src=http://s3.amazonaws.com/fjwp/blog/wp-content/uploads/2016/03/04034507/Job-Searching-Online-8-Best-Practices-You-Need-to-Know.jpg class="img-responsive col-sm-6 cols"
-				alt="Cinque Terre">
-<%--			<img src="https://www.naylor.com/wp-content/uploads/2017/07/careers_career-fairs.gif" class="img-responsive col-sm-6 cols" width="50%">--%>
-			<div class=" row vertical-divider col-sm-6 text-center cols row1 row2 well" style="background-color: #B6FFCE;">
-				<h1>Start now</h1>
-				<div class="col-xs-6"	>
-					<h4><strong>Returning users</strong></h4>
-					<button class="btn btn-primary btn-block"
-						onclick="document.getElementById('id01').style.display='block'">Login</button>
-				</div>
-				<div class="col-xs-6">
-					<h4><strong>New users</strong></h4>
-					<form action="/register" method="post">
-					<button type="submit" class="btn btn-danger btn-block">Register</button>
-						</form>
-				</div>
-
-
-				<div id="id01" class="modal">
-
-					<form class="modal-content animate" action="/login" method="post">
-						<div class="imgcontainer">
-							<span
-								onclick="document.getElementById('id01').style.display='none'"
-								class="close" title="Close Modal">&times;</span> <img
-								src="https://cdn2.iconfinder.com/data/icons/website-icons/512/User_Avatar-512.png" alt="Avatar" class="avatar">
-						</div>
-						<div class="btn-group btn-group-justified" data-toggle="buttons">
+						<%--<div class="form-group well">
+							&lt;%&ndash;<div class="btn-group btn-group-justified" data-toggle="buttons">
 								<label class="btn btn-default active"> <input
 									type="radio" name="type" id="seeker" value="seeker"
 									autocomplete="off" checked> Job Seeker
-								</label> <label class="btn btn-default"> <input type="radio"
+								</label>
+								<label class="btn btn-default"> <input type="radio"
 									name="type" id="recruiter" value="recruiter"
 									autocomplete="off"> Recruiter
 								</label>
 
+							</div>&ndash;%&gt;
+						</div>--%>
+						<%--<div class="col-sm-12">
+							<div class="form-group">
+								<label>Name</label> <input type="text" placeholder="Enter Full Name Here.." class="form-control" name="name" required>
 							</div>
 
-						<div class="container-fluid">
-							<label><b>Email</b></label> <input type="text"
-								placeholder="Enter Email" name="emailId" required> <label><b>Password</b></label>
-							<input type="password" placeholder="Enter Password" name="password"
-								required>
+							<div class="form-group">
+								<label>Email Address</label> <input type="text" name="email" placeholder="Enter Email Address Here.." class="form-control" name="email" required>
+							</div>
+							<div class="form-group">
+								<label>Password</label> <input type="password" name="password" placeholder="Enter Password" class="form-control" name="psw" required>
+							</div>
 
-							<button type="submit">Login</button>
-						</div>
 
+							<button type="submit" class="btn btn-lg btn-primary">Submit</button>
+						</div>--%>
+					<form action="/register/verify" method="post">
+						<input type="hidden"  name="userId" value="${userId}"></input>
+						<input type="hidden"  name="type" value="${type}"></input>
+							<div class="form-group">
+								<label>One Time Password</label>
+								<input type="password" name="pin" placeholder="Enter OTP sent to your mail!" class="form-control" name="pin" required></input>
+							</div>
+							<button type="submit" class="btn btn-lg btn-primary">Submit</button>
 					</form>
 				</div>
-
 			</div>
 		</div>
+
+
+
+
+
+
+<%--		<div id="team" class="container-fluid text-center">--%>
+<%--			<h1>Team:</h1>--%>
+<%--			<p>Amay</p>--%>
+<%--			<p>Ashay</p>--%>
+<%--			<p>Avdeep</p>--%>
+<%--			<p>Surendra</p>--%>
+<%--			<p>Surendra</p>--%>
+<%--		</div>--%>
 
 	</div>
 	<footer id="team" class="text-center navbar-fixed-bottom">
 		<p> &copy; 2022 JobSeek Company</p>
 	</footer>
 
-	<script>
-		// Get the modal
-		var modal = document.getElementById('id01');
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	</script>
 
 </body>
 
