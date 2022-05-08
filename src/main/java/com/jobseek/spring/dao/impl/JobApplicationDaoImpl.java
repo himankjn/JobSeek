@@ -53,6 +53,7 @@ public class JobApplicationDaoImpl implements JobApplicationDao {
 		JobApplication ja = getJobApplication(jobAppId);
 		if (ja != null) {
 			entityManager.remove(ja);
+			return true;
 		}
 		return false;
 	}

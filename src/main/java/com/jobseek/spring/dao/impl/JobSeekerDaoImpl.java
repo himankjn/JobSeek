@@ -186,7 +186,6 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 		//System.out.println("array len="+searchStringArray.length);
 		String selectQuery = "SELECT jp.jobId FROM JobPosting jp";
 		if (!searchString.isEmpty()) {
-			System.out.println("never come here");
 			selectQuery = selectQuery.concat(" WHERE ");
 		}
 

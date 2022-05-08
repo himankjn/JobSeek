@@ -1,7 +1,8 @@
 package com.jobseek.spring.dao.impl;
-
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -38,6 +39,14 @@ public class JobPostingDaoImpl implements JobPostingDao {
 		return job;
 	}
 
+	@Override
+	public List<Integer> getCompanyJobPostingIds(int compId) {
+		JobPosting j = null;
+		Query query = entityManager.createQuery("SELECT jp.jobId FROM JobPosting jp where jp.company.companyId=:compId");
+		query.setParameter("compId",compId);
+		List<Integer> querylist = query.getResultList();
+		return querylist;
+	}
 	@Override
 	public JobPosting getJobPosting(int id) {
 		JobPosting j = null;
