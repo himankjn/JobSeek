@@ -73,7 +73,7 @@ public class InterestedDaoImpl implements InterestedDao {
 	 * @param userId
 	 * @return Job Id for interested list
 	 */
-	public List<?> getInterestedJobId(int jobId, int userId) {
+	public List<?> getInterestedfromJobIdUserId(int jobId, int userId) {
 		Query query = entityManager.createQuery("SELECT ID FROM Interested jd WHERE jd.jobId = :jobid and jd.jobSeekerId =:userid");
 		query.setParameter("jobid", jobId);
 		query.setParameter("userid", userId);

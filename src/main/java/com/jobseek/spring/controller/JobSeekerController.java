@@ -487,7 +487,7 @@ public class JobSeekerController {
 	public String deleteInterest(@RequestParam("userId") String userId, @RequestParam("jobId") String jobId, Model model) {
 
 		try {
-			List<?> querylist = interestedDao.getInterestedJobId(Integer.parseInt(jobId), Integer.parseInt(userId));
+			List<?> querylist = interestedDao.getInterestedfromJobIdUserId(Integer.parseInt(jobId), Integer.parseInt(userId));
 			boolean interestDeleted = interestedDao.deleteInterest(Integer.parseInt(querylist.get(0).toString()));
 			if (interestDeleted) {
 				JobPosting job = jobDao.getJobPosting(Integer.parseInt(jobId));
