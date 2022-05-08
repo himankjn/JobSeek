@@ -916,7 +916,7 @@ a.stp-back-totop {
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
-						<form action="/searchjobs" method="get">
+						<form action="/searchjobs" method="post">
 							<input type="hidden" name="userId" value="${seeker.jobseekerId}"></input>
 							<button type="submit" class="btn btn-block btn-lg btn-primary">Search all jobs</button>
 						</form>

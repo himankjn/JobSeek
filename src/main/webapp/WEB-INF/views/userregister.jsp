@@ -222,8 +222,6 @@ body {
 					${seeker.firstName} <span class="caret"></span>
 				</a>
 					<ul class="dropdown-menu">
-						<%--							<li><a href="/userprofile/${seeker.jobseekerId}">Profile</a></li>--%>
-						<%--							<li><a href="/searchjobs?userId=${seeker.jobseekerId}">Search Jobs</a></li>--%>
 						<li><a href="/findjobs">Logout</a></li>
 					</ul></li>
 			</ul>
