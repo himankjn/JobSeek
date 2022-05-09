@@ -16,7 +16,7 @@ services:
       
   jobportal:
     container_name: jobportal
-    image: himankjn/jobportal
+    image: jobseek/jobportal
     ports:
       - "8095:8095"
     environment:
