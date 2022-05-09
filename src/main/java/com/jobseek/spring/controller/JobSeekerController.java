@@ -369,9 +369,6 @@ public class JobSeekerController {
 		} else {
 			jobskr = jobSeekerDao.createJobSeeker(js);
 		}
-		System.out.println("done");
-		System.out.println("ashay");
-		System.out.println(jobskr.getVerificationCode());
 
 		model.addAttribute("seeker", jobskr);
 		return "userprofile";
@@ -413,9 +410,11 @@ public class JobSeekerController {
 			c.setDescription(description.get());
 		}
 
+
 		Company company = companyDao.getCompany(Integer.parseInt(id));
 		Company c1 = null;
 		if (company != null) {
+			c.setVerified(company.isVerified());
 			c1 = companyDao.updateCompany(c);
 
 		} else {

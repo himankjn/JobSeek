@@ -170,4 +170,172 @@
 2022-05-09 13:47:18.337 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompanyIdFromEmail] - 
 2022-05-09 13:47:18.338 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
 2022-05-09 13:47:18.339 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@35567ce2
-2022-05-0
+2022-05-02022-05-09 14:03:59.869 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [PasswordLookUp] - amazon369123@gmail.com
+2022-05-09 14:03:59.932 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [Result - PasswordLookUp] - [1234]
+2022-05-09 14:03:59.935 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompanyIdFromEmail] - amazon369123@gmail.com
+2022-05-09 14:03:59.939 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompanyIdFromEmail] - 
+2022-05-09 14:03:59.940 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:03:59.950 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@50229e3e
+2022-05-09 14:04:02.329 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [PasswordLookUp] - amazon369123@gmail.com
+2022-05-09 14:04:02.334 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [Result - PasswordLookUp] - [1234]
+2022-05-09 14:04:02.337 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompanyIdFromEmail] - amazon369123@gmail.com
+2022-05-09 14:04:02.339 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompanyIdFromEmail] - 
+2022-05-09 14:04:02.342 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:04:02.344 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@40a28529
+2022-05-09 14:04:05.115 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [updateCompany] - com.jobseek.spring.entity.Company@50229e3e
+2022-05-09 14:04:05.116 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:04:05.116 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@50229e3e
+2022-05-09 14:04:05.119 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - updateCompany] - com.jobseek.spring.entity.Company@50229e3e
+2022-05-09 14:04:06.138 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [updateCompany] - com.jobseek.spring.entity.Company@40a28529
+2022-05-09 14:04:06.138 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:04:06.138 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@40a28529
+2022-05-09 14:04:06.138 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - updateCompany] - com.jobseek.spring.entity.Company@40a28529
+2022-05-09 14:04:43.057 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:04:43.061 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@9d6b30
+2022-05-09 14:04:43.064 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [verify] - com.jobseek.spring.entity.Company@9d6b30
+2022-05-09 14:04:43.064 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:04:43.064 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@9d6b30
+2022-05-09 14:04:43.064 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - verify] - com.jobseek.spring.entity.Company@9d6b30
+2022-05-09 14:05:02.695 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:02.706 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@10c34c7c
+2022-05-09 14:05:02.709 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [updateCompany] - com.jobseek.spring.entity.Company@709c4700
+2022-05-09 14:05:02.709 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:02.712 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@10c34c7c
+2022-05-09 14:05:02.713 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - updateCompany] - com.jobseek.spring.entity.Company@10c34c7c
+2022-05-09 14:05:10.766 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [PasswordLookUp] - amazon369123@gmail.com
+2022-05-09 14:05:10.769 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [Result - PasswordLookUp] - [1234]
+2022-05-09 14:05:10.770 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompanyIdFromEmail] - amazon369123@gmail.com
+2022-05-09 14:05:10.771 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompanyIdFromEmail] - 
+2022-05-09 14:05:10.773 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:10.774 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@46c65b7e
+2022-05-09 14:05:15.155 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [updateCompany] - com.jobseek.spring.entity.Company@46c65b7e
+2022-05-09 14:05:15.156 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:15.156 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@46c65b7e
+2022-05-09 14:05:15.157 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - updateCompany] - com.jobseek.spring.entity.Company@46c65b7e
+2022-05-09 14:05:49.953 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:49.957 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@3434350
+2022-05-09 14:05:49.958 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [verify] - com.jobseek.spring.entity.Company@3434350
+2022-05-09 14:05:49.959 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:49.959 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@3434350
+2022-05-09 14:05:49.959 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - verify] - com.jobseek.spring.entity.Company@3434350
+2022-05-09 14:05:57.482 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:57.484 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@14b5968c
+2022-05-09 14:05:57.487 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [updateCompany] - com.jobseek.spring.entity.Company@472dc87a
+2022-05-09 14:05:57.488 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 1
+2022-05-09 14:05:57.488 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@14b5968c
+2022-05-09 14:05:57.488 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - updateCompany] - com.jobseek.spring.entity.Company@14b5968c
+2022-05-09 14:07:44.989 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [PasswordLookUp] - amazon369123@gmail.com
+2022-05-09 14:07:44.990 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [Result - PasswordLookUp] - [1234]
+2022-05-09 14:07:44.991 [http-nio-8095-exec-5] INFO  com.jobseek.spring.dao.im2022-05-09 14:38:53.296 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [PasswordLookUp] - himank369123@gmail.com
+2022-05-09 14:38:53.370 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - PasswordLookUp] - [1234]
+2022-05-09 14:38:53.372 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getUserIdFromEmail] - himank369123@gmail.com
+2022-05-09 14:38:53.377 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getUserIdFromEmail] - [1]
+2022-05-09 14:38:53.378 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 1
+2022-05-09 14:38:53.387 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@ad64753
+2022-05-09 14:38:57.649 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [updateJobSeeker] - com.jobseek.spring.entity.JobSeeker@ad64753
+2022-05-09 14:38:57.650 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 1
+2022-05-09 14:38:57.650 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@ad64753
+2022-05-09 14:38:57.653 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - updateJobSeeker] - com.jobseek.spring.entity.JobSeeker@ad64753
+2022-05-09 14:39:53.675 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 1
+2022-05-09 14:39:53.677 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@20755b8
+2022-05-09 14:39:53.679 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [verify] - com.jobseek.spring.entity.JobSeeker@20755b8
+2022-05-09 14:39:53.679 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 1
+2022-05-09 14:39:53.679 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@20755b8
+2022-05-09 14:39:53.679 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - verify] - true
+2022-05-09 14:39:57.048 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 1
+2022-05-09 14:39:57.051 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@369be6f
+2022-05-09 14:39:57.054 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [updateJobSeeker] - com.jobseek.spring.entity.JobSeeker@301cf774
+2022-05-09 14:39:57.055 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 1
+2022-05-09 14:39:57.055 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@369be6f
+2022-05-09 14:39:57.055 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - updateJobSeeker] - com.jobseek.spring.entity.JobSeeker@369be6f
+2022-05-09 14:40:05.793 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [PasswordLookUp] - amazon369123@gmail.com
+2022-05-09 14:40:05.799 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [Result - PasswordLookUp] - []
+2022-05-09 14:40:57.916 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompanyIdFromEmail] - amazon369123@gmail.com
+2022-05-09 14:40:57.924 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompanyIdFromEmail] - 
+2022-05-09 14:40:57.925 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@f5fbcb5
+2022-05-09 14:40:57.933 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@f5fbcb5
+2022-05-09 14:40:59.166 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompanyIdFromEmail] - amazon369123@gmail.com
+2022-05-09 14:40:59.168 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompanyIdFromEmail] - 
+2022-05-09 14:41:22.650 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompanyIdFromEmail] - amazon369123@gmail.com
+2022-05-09 14:41:22.652 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompanyIdFromEmail] - 
+2022-05-09 14:41:22.656 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@7de1b51a
+2022-05-09 14:41:22.658 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@7de1b51a
+2022-05-09 14:41:45.314 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:41:45.318 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@38966086
+2022-05-09 14:41:45.320 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [verify] - com.jobseek.spring.entity.Company@38966086
+2022-05-09 14:41:45.320 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:41:45.321 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@38966086
+2022-05-09 14:41:45.321 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - verify] - com.jobseek.spring.entity.Company@38966086
+2022-05-09 14:41:45.329 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:41:45.329 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@38966086
+2022-05-09 14:41:49.512 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:41:49.514 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@1f5757b7
+2022-05-09 14:41:49.515 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [updateCompany] - com.jobseek.spring.entity.Company@3c820769
+2022-05-09 14:41:49.515 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:41:49.515 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@1f5757b7
+2022-05-09 14:41:49.515 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - updateCompany] - com.jobseek.spring.entity.Company@1f5757b7
+2022-05-09 14:41:52.969 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:41:52.971 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@5b8b9a72
+2022-05-09 14:42:35.001 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@59cb346 - 2
+2022-05-09 14:42:35.011 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@59cb346
+2022-05-09 14:42:35.018 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:42:35.018 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@7df87c89
+2022-05-09 14:42:36.675 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 1
+2022-05-09 14:42:36.679 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.Intereste2022-05-09 14:55:46.226 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:55:46.244 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@3d0281df
+2022-05-09 14:55:48.914 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:55:48.917 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@6ea93fc2
+2022-05-09 14:56:16.850 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@2830994f - 2
+2022-05-09 14:56:16.877 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@2830994f
+2022-05-09 14:56:16.883 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:16.884 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@48e1bd47
+2022-05-09 14:56:26.698 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:26.700 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@2bcb4162
+2022-05-09 14:56:29.363 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getJobsByCompany] - 2
+2022-05-09 14:56:29.468 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getJobsByCompany] - [[Ljava.lang.Object;@1b8c56e4]
+2022-05-09 14:56:29.470 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:29.471 [http-nio-8095-exec-8] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@134474e
+2022-05-09 14:56:32.930 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 4
+2022-05-09 14:56:32.933 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@3c64bb6e
+2022-05-09 14:56:32.934 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:32.934 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@80066e4
+2022-05-09 14:56:35.133 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:35.135 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@687875e2
+2022-05-09 14:56:35.136 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 4
+2022-05-09 14:56:35.138 [http-nio-8095-exec-1] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@70049d8b
+2022-05-09 14:56:42.041 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [updateJobPosting] - com.jobseek.spring.entity.JobPosting@48f0d582
+2022-05-09 14:56:42.041 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 4
+2022-05-09 14:56:42.050 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@69b090af
+2022-05-09 14:56:42.052 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - updateJobPosting] - com.jobseek.spring.entity.JobPosting@69b090af
+2022-05-09 14:56:42.067 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:42.067 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@27a204de
+2022-05-09 14:56:46.433 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:46.436 [http-nio-8095-exec-4] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@60e0e472
+2022-05-09 14:56:48.137 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getJobsByCompany] - 2
+2022-05-09 14:56:48.139 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getJobsByCompany] - [[Ljava.lang.Object;@4faa8160]
+2022-05-09 14:56:48.152 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:48.156 [http-nio-8095-exec-6] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@6cd6e0eb
+2022-05-09 14:56:52.482 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 4
+2022-05-09 14:56:52.485 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@44ce2220
+2022-05-09 14:56:52.487 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:56:52.488 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@6e5c73ad
+2022-05-09 14:56:55.638 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 4
+2022-05-09 14:56:55.642 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@43b57c68
+2022-05-09 14:56:55.644 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 4
+2022-05-09 14:56:55.644 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@43b57c68
+2022-05-09 14:56:55.645 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getJobsByCompany] - 2
+2022-05-09 14:56:55.648 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getJobsByCompany] - [[Ljava.lang.Object;@4b9b8240]
+2022-05-09 14:56:55.650 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [deleteJobPosting] - 4
+2022-05-09 14:56:55.650 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 4
+2022-05-09 14:56:55.650 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@43b57c68
+2022-05-09 14:56:55.660 [http-nio-8095-exec-9] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - deleteJobPosting] - true
+2022-05-09 14:57:02.022 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:57:02.024 [http-nio-8095-exec-10] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@26bf2dc
+2022-05-09 14:57:04.637 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getJobsByCompany] - 2
+2022-05-09 14:57:04.639 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getJobsByCompany] - []
+2022-05-09 14:57:04.640 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:57:04.643 [http-nio-8095-exec-2] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@53ed49a8
+2022-05-09 14:57:13.657 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getJobsByCompany] - 2
+2022-05-09 14:57:13.663 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getJobsByCompany] - []
+2022-05-09 14:57:13.664 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 2
+2022-05-09 14:57:13.668 [http-nio-8095-exec-3] INFO  com.jobseek.spring.dao

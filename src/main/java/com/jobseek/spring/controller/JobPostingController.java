@@ -1,9 +1,6 @@
 package com.jobseek.spring.controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,8 +59,8 @@ public class JobPostingController {
 	 */
 	@RequestMapping(value="/jobprofile",method = RequestMethod.POST)
 	public String createJobPosting(@RequestParam("title") String title, @RequestParam("description") String description,
-			@RequestParam("responsibilities") String responsibilities, @RequestParam("location") String location,
-			@RequestParam("salary") String salary, @RequestParam("cid") String cid, Model model) {
+								   @RequestParam("responsibilities") String responsibilities, @RequestParam("location") String location,
+								   @RequestParam("salary") String salary, @RequestParam("cid") String cid, @RequestParam("id") Optional<Integer> jid, Model model) {
 		JobPosting j = new JobPosting();
 		j.setTitle(title);
 		j.setDescription(description);
@@ -72,15 +69,24 @@ public class JobPostingController {
 		j.setSalary(salary);
 		j.setKeywords(title + " " + description + " " + responsibilities + " " + location);
 
+
+
 		try {
-			System.out.println("0");
-
-			JobPosting p1 = jobDao.createJobPosting(j, Integer.parseInt(cid));
-
-			model.addAttribute("job", p1);
-			Company company = companyDao.getCompany(Integer.parseInt(cid));
-			model.addAttribute("company", company);
-			return "jobprofile";
+			if(jid.isPresent()){
+				j.setjobId(jid.get());
+				JobPosting p1=jobDao.updateJobPosting(j);
+				model.addAttribute("job", p1);
+				Company company = companyDao.getCompany(Integer.parseInt(cid));
+				model.addAttribute("company", company);
+				return "jobprofile";
+			}
+			else {
+				JobPosting p1 = jobDao.createJobPosting(j, Integer.parseInt(cid));
+				model.addAttribute("job", p1);
+				Company company = companyDao.getCompany(Integer.parseInt(cid));
+				model.addAttribute("company", company);
+				return "jobprofile";
+			}
 
 		} catch (Exception e) {
 			HttpHeaders httpHeaders = new HttpHeaders();
@@ -108,18 +114,17 @@ public class JobPostingController {
 		String mytitle=jobDao.getJobPosting(id).getTitle();
 
 		Company company = jobDao.getJobPosting(id).getCompany();
-		List<?> companyJobPostings = new ArrayList<String>();
-		companyJobPostings= companyDao.getJobsByCompany(company.getCompanyId());
-
-		model.addAttribute("jobs", companyJobPostings);
-		model.addAttribute("company", company);
 		if (jobDao.deleteJobPosting(id)) {
 			System.out.println("inside delete");
 			String message = "<div class=\"alert alert-success\">Job Posting with job id: <strong>${id}</strong> and title: <strong>${mytitle}</strong> has been <strong>Successfully deleted</strong></div>";
+
+			List<?> companyJobPostings = new ArrayList<String>();
+			companyJobPostings= companyDao.getJobsByCompany(company.getCompanyId());
+			model.addAttribute("jobs", companyJobPostings);
+			model.addAttribute("company", company);
 			model.addAttribute("message", message);
 			model.addAttribute("id",id);
 			model.addAttribute("mytitle",mytitle);
-			model.addAttribute("jobs", companyJobPostings);
 			model.addAttribute("company", company);
 			return "companyjobs";
 		} else {

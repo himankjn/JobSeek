@@ -141,17 +141,21 @@ span.psw {
 	animation: animatezoom 0.6s
 }
 
-@
+
 -webkit-keyframes animatezoom {
-	from {-webkit-transform: scale(0)
+
+from {
+	-webkit-transform: scale(0)
+}
+
 }
 
 to {
 	-webkit-transform: scale(1)
 }
 
-}
-@
+
+
 keyframes animatezoom {
 	from {transform: scale(0)
 }
@@ -239,7 +243,7 @@ body {
 				</div>
 				<div class="col-xs-6">
 					<h4><strong>New users</strong></h4>
-					<form action="/register" method="post">
+					<form action="/register" method="get">
 					<button type="submit" class="btn btn-danger btn-block">Register</button>
 						</form>
 				</div>

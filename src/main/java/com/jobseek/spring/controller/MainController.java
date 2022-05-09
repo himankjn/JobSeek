@@ -112,10 +112,10 @@ public class MainController {
 					if(!js.isVerified()){
 						int randomPIN = (int) (Math.random() * 9000) + 1000;
 						String message2="<div class=\"alert alert-danger\">Your email hasn't been verified! Please Verify the email before tyring to login. We have sent an email with new OTP.</div>";
-						js.setVerificationCode(randomPIN);
-						String verificationUrl = "Dear Jobseeker,\n" + "One time password for registration at JobSeek is: " + randomPIN;
 
+						String verificationUrl = "Dear Jobseeker,\n" + "One time password for registration at JobSeek is: " + randomPIN;
 						emailService.sendSimpleMessage(email, "Verification Pin", verificationUrl);
+						js.setVerificationCode(randomPIN);
 						jobSeekerDao.updateJobSeeker(js);
 						model.addAttribute("pin",randomPIN);
 						model.addAttribute("type","seeker");
@@ -168,6 +168,7 @@ public class MainController {
 			if (j.getVerificationCode() == Integer.parseInt(pin)) {
 				j.setVerified(true);
 				companyDao.verify(j);
+				j=companyDao.getCompany(userId);
 				model.addAttribute("company", j);
 				return "companyregister";
 			} else {
