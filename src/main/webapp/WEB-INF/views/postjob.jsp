@@ -246,7 +246,7 @@ body {
 		</nav>
 
 		<div style="margin-top: 3%" class="text-center" >
-			<img src="http://www.pharmatutor.org/images/post-jobs-banner.jpg">
+			<img src="https://www.latestlaws.com/media/2018/09/Job-Post.jpg" width="25%">
 <%--			<div class="container text-center">--%>
 
 
