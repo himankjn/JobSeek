@@ -330,6 +330,7 @@ public class JobSeekerController {
 
 		js.setJobseekerId(Integer.parseInt(id));
 
+
 		if (!emailid.equals(Optional.empty())) {
 			System.out.println("emailid done : " + emailid.get() + ":::: " + emailid);
 			js.setEmailId(emailid.get());
@@ -364,8 +365,8 @@ public class JobSeekerController {
 		JobSeeker jobseeker = jobSeekerDao.getJobSeeker(Integer.parseInt(id));
 		JobSeeker jobskr = null;
 		if (jobseeker != null) {
+			js.setVerified(jobseeker.isVerified());
 			jobskr = jobSeekerDao.updateJobSeeker(js);
-			System.out.println("updated");
 		} else {
 			jobskr = jobSeekerDao.createJobSeeker(js);
 		}

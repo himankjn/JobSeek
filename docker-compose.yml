@@ -3,7 +3,7 @@ version: "2.1"
 services:
   mysql-jobportal:
     container_name: mysql-jobportal
-    image: mysql
+    image: "mysql:8.0.29"
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=jobportal
@@ -13,20 +13,16 @@ services:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       timeout: 20s
       retries: 10
-      
   jobportal:
     container_name: jobportal
-    image: jobseek/jobportal
+    image: himankjn/jobportal
     ports:
       - "8095:8095"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-jobportal:3306/jobportal?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
-#    build:
-#      context: "./"
-#      dockerfile: "Dockerfile"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
     depends_on:
       mysql-jobportal:
         condition: service_healthy
-
-
-
