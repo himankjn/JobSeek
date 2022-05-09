@@ -71,7 +71,6 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
-<<<<<<< HEAD
 
 
 		<dependency>
@@ -84,7 +83,7 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.14.0</version>
 		</dependency>
-=======
+
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
@@ -95,7 +94,6 @@
 		</dependency>
 
 
->>>>>>> 3026fcfdfc5d0c80343463b017293598a665ffb0
 		<!--<dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-core</artifactId>
