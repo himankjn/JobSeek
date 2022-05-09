@@ -1104,11 +1104,9 @@ a.stp-back-totop {
 					</div>
 
 					<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-4 col-xs-12 stp-user-info">
-						<h2>Salary:</h2>
-						<h2>$ ${job.salary}</h2>
+						<h2>Salary: $ ${job.salary}</h2>
 						<br>
-						<h2>Job responsibilities:</h2>
-						<h2>${job.responsibilities}</h2>
+						<h2>Job responsibilities: ${job.responsibilities}</h2>
 
 					</div>
 					<!-- job info -->
@@ -1138,7 +1136,7 @@ a.stp-back-totop {
 						<div class="row">
 							<div class="col-lg-12 col-xs-12">
 								<div class="stp-jobs">
-									<h4 class="stp-job-time">${job.description}</h4>
+									<h2 class="stp-job-time">${job.description}</h2>
 
 
 								</div>

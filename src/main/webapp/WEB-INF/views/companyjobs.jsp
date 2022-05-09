@@ -9,7 +9,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>Search jobs | JobSeek</title>
+<title>Company Job Posting | JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->

@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="author" content="">
-<title>FindJobs.com</title>
+<title>JobSeek</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -33,7 +33,7 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/findjobs">FindJobs.com</a>
+					<a class="navbar-brand" href="/findjobs">JobSeek</a>
 				</div>
 			</div>
 		</nav>
@@ -42,21 +42,12 @@
 			<div class="container text-center">
 
 				<h2>
-					<img src="http://qspear.com/admin/images/news_events_images/partner_news.png" height="80" width="auto">FindJobs.com
+					<img src="http://qspear.com/admin/images/news_events_images/partner_news.png" height="80" width="auto">Jobseek
 				</h2>
 				<h1>An error Occurred</h1>
 
 				<p>Go back</p>
 			</div>
-		</div>
-		
-		<div id="team" class="container-fluid text-center">
-			<h1>Team:</h1>
-			<p>Amay</p>
-			<p>Ashay</p>
-			<p>Avdeep</p>
-			<p>Surendra</p>
-			<p>Surendra</p>
 		</div>
 
 	</div>

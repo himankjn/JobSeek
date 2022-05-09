@@ -223,35 +223,6 @@ body {
 			</h1>
 			<div class="col-lg-12 well">
 				<div class="row">
-
-						<%--<div class="form-group well">
-							&lt;%&ndash;<div class="btn-group btn-group-justified" data-toggle="buttons">
-								<label class="btn btn-default active"> <input
-									type="radio" name="type" id="seeker" value="seeker"
-									autocomplete="off" checked> Job Seeker
-								</label>
-								<label class="btn btn-default"> <input type="radio"
-									name="type" id="recruiter" value="recruiter"
-									autocomplete="off"> Recruiter
-								</label>
-
-							</div>&ndash;%&gt;
-						</div>--%>
-						<%--<div class="col-sm-12">
-							<div class="form-group">
-								<label>Name</label> <input type="text" placeholder="Enter Full Name Here.." class="form-control" name="name" required>
-							</div>
-
-							<div class="form-group">
-								<label>Email Address</label> <input type="text" name="email" placeholder="Enter Email Address Here.." class="form-control" name="email" required>
-							</div>
-							<div class="form-group">
-								<label>Password</label> <input type="password" name="password" placeholder="Enter Password" class="form-control" name="psw" required>
-							</div>
-
-
-							<button type="submit" class="btn btn-lg btn-primary">Submit</button>
-						</div>--%>
 					<form action="/register/verify" method="post">
 						<input type="hidden"  name="userId" value="${userId}"></input>
 						<input type="hidden"  name="type" value="${type}"></input>
@@ -264,21 +235,6 @@ body {
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
-<%--		<div id="team" class="container-fluid text-center">--%>
-<%--			<h1>Team:</h1>--%>
-<%--			<p>Amay</p>--%>
-<%--			<p>Ashay</p>--%>
-<%--			<p>Avdeep</p>--%>
-<%--			<p>Surendra</p>--%>
-<%--			<p>Surendra</p>--%>
-<%--		</div>--%>
-
 	</div>
 	<footer id="team" class="text-center navbar-fixed-bottom">
 		<p> &copy; 2022 JobSeek Company</p>

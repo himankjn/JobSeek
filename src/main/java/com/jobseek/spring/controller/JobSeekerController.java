@@ -65,7 +65,7 @@ public class JobSeekerController {
 	 * @param salary
 	 * @return Jobs that match the filter criteria
 	 */
-	@RequestMapping(value = "/searchjobs", method = RequestMethod.GET)
+	@RequestMapping(value = "/searchjobs", method = RequestMethod.POST)
 	public String searchJobs(@RequestParam("userId") String userId,
 			@RequestParam("searchString") Optional<String> searchString,
 			@RequestParam("locations") Optional<String> locations,
