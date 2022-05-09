@@ -36,7 +36,7 @@ public class MainController {
 	/**
 	 * @return Register page
 	 */
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String showRegisterPage() {
 		return "register";
 	}
