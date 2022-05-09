@@ -62,8 +62,8 @@ public class InterestedDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -72,16 +72,13 @@ public class InterestedDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
 
         Interested in=new Interested();
         in.setJobId(jpid);
         in.setJobSeekerId(jsid);
-        interestedDao.createInterest(in);
-
-        int inid=Integer.parseInt(interestedDao.getInterestedfromJobIdUserId(jpid,jsid).get(0).toString());
-
+        int inid=interestedDao.createInterest(in).getId();
         boolean actual=interestedDao.deleteInterest(inid);
         assertEquals("testing delete interested",true,actual);
     }
@@ -96,8 +93,8 @@ public class InterestedDaoTest {
         js.setFirstName("jobseeker1");
         js.setPassword("123");
         js.setVerificationCode(1111);
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -106,8 +103,8 @@ public class InterestedDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -116,15 +113,14 @@ public class InterestedDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
 
         Interested in=new Interested();
         in.setJobId(jpid);
         in.setJobSeekerId(jsid);
-        interestedDao.createInterest(in);
+        int inid=interestedDao.createInterest(in).getId();
 
-        int inid=Integer.parseInt(interestedDao.getInterestedfromJobIdUserId(jpid,jsid).get(0).toString());
         Interested newin=interestedDao.getInterest(inid);
 
         assertEquals(newin.getJobId(),jpid);
@@ -141,8 +137,8 @@ public class InterestedDaoTest {
         js.setFirstName("jobseeker1");
         js.setPassword("123");
         js.setVerificationCode(1111);
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -151,8 +147,8 @@ public class InterestedDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -161,8 +157,8 @@ public class InterestedDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
 
         Interested in=new Interested();
         in.setJobId(jpid);
@@ -183,8 +179,8 @@ public class InterestedDaoTest {
         js.setFirstName("jobseeker1");
         js.setPassword("123");
         js.setVerificationCode(1111);
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -193,8 +189,8 @@ public class InterestedDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -203,8 +199,8 @@ public class InterestedDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
 
         Interested in=new Interested();
         in.setJobId(jpid);

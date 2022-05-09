@@ -71,8 +71,8 @@ public class CompanyDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int id=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int id =c.getCompanyId();
         c.setHeadquarters("newyork");
         companyDao.updateCompany(c);
         String expected="newyork";
@@ -93,8 +93,8 @@ public class CompanyDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int id=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int id=c.getCompanyId();
         Company c2=companyDao.getCompany(id);
         assertEquals(c.toString(),c2.toString(),"checking get company method");
     }
@@ -110,8 +110,8 @@ public class CompanyDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int id=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int id=c.getCompanyId();
         c.setVerified(true);
         companyDao.verify(c);
         boolean actual=companyDao.getCompany(id).isVerified();
@@ -131,9 +131,9 @@ public class CompanyDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
+        c=companyDao.createCompany(c);
 
-        int id=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        int id=c.getCompanyId();
         companyDao.getJobsByCompany(id);
 
         JobPosting j1=new JobPosting();
@@ -167,14 +167,14 @@ public class CompanyDaoTest {
     @Rollback(true)
     public void getCompanyIdFromEmail() throws Exception {
         Company c=new Company();
-        c.setVerified(false);
+        c.setVerified(true);
         c.setVerificationCode(1234);
         c.setCompanyName("testcomp1");
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int actual=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int actual=c.getCompanyId();
         int expected=c.getCompanyId();
 
         assertEquals(expected,actual,"check company id from email");

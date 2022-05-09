@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,12 +22,13 @@ import com.jobseek.spring.entity.JobPosting;
 @Transactional
 @Service
 public class JobPostingDaoImpl implements JobPostingDao {
-
+	private static final Logger logger = LogManager.getLogger(InterestedDaoImpl.class);
 	@PersistenceContext
 	private EntityManager entityManager;
 
 	@Override
 	public JobPosting createJobPosting(JobPosting job, int cid) {
+		logger.info("[createJobPosting] - "+job.toString()+" - "+cid);
 		try {
 			System.out.println("1");
 			Company c = entityManager.find(Company.class, cid);
@@ -36,40 +39,47 @@ public class JobPostingDaoImpl implements JobPostingDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		logger.info("[RESULT - createJobPosting] - "+job.toString());
 		return job;
 	}
 
 	@Override
 	public List<Integer> getCompanyJobPostingIds(int compId) {
+		logger.info("]getCompanyJobPostingIds] - "+compId);
 		JobPosting j = null;
 		Query query = entityManager.createQuery("SELECT jp.jobId FROM JobPosting jp where jp.company.companyId=:compId");
 		query.setParameter("compId",compId);
 		List<Integer> querylist = query.getResultList();
+		logger.info("[RESULT - getCompanyJobPostingIds] - "+querylist.toString());
 		return querylist;
 	}
 	@Override
 	public JobPosting getJobPosting(int id) {
+		logger.info("[getJobPosting] - "+id);
 		JobPosting j = null;
 
 		j = entityManager.find(JobPosting.class, id);
-
+		logger.info("[RESULT - getJobPosting] - "+j.toString());
 		return j;
 	}
 
 	@Override
 	public boolean deleteJobPosting(int id) {
+		logger.info("[deleteJobPosting] - "+id);
 		JobPosting p = getJobPosting(id);
 		if (p != null) {
 			entityManager.remove(p);
 		} else {
+			logger.info("[RESULT - deleteJobPosting] - "+false);
 			return false;
 		}
+		logger.info("[RESULT - deleteJobPosting] - "+true);
 		return true;
 	}
 
 	@Override
 	public JobPosting updateJobPosting(JobPosting p) {
-
+		logger.info("[updateJobPosting] - "+p.toString());
 		JobPosting p1 = getJobPosting(p.getJobId());
 		p1.setDescription(p.getDescription());
 		p1.setLocation(p.getLocation());
@@ -84,6 +94,7 @@ public class JobPostingDaoImpl implements JobPostingDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		logger.info("[RESULT - updateJobPosting] - "+p1.toString());
 		return p1;
 	}
 }

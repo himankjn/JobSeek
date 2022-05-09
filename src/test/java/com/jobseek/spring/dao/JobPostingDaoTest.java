@@ -33,8 +33,8 @@ public class JobPostingDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -60,8 +60,8 @@ public class JobPostingDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -88,8 +88,8 @@ public class JobPostingDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -118,8 +118,8 @@ public class JobPostingDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -145,8 +145,8 @@ public class JobPostingDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -157,9 +157,9 @@ public class JobPostingDaoTest {
         jp.setLocation("Bangalore");
         JobPosting jp2=jobPostingDao.createJobPosting(jp,cid);
         jp.setLocation("Hyderabad");
-        jobPostingDao.updateJobPosting(jp);
+        jp=jobPostingDao.updateJobPosting(jp);
 
-        String actual=jobPostingDao.getJobPosting(jp.getJobId()).getLocation();
+        String actual=jp.getLocation();
         String expected="Hyderabad";
         assertEquals("checking update jobposting",actual,expected);
     }

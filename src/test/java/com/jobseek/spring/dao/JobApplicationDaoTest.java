@@ -39,8 +39,8 @@ public class JobApplicationDaoTest {
         js.setPassword("123");
         js.setVerificationCode(1111);
 
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -49,8 +49,8 @@ public class JobApplicationDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -59,8 +59,8 @@ public class JobApplicationDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
 
         JobApplication ja=jobApplicationDao.apply(jsid,jpid,true,"home/documets/resumes");
 
@@ -78,8 +78,8 @@ public class JobApplicationDaoTest {
         js.setPassword("123");
         js.setVerificationCode(1111);
 
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -88,8 +88,8 @@ public class JobApplicationDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -98,8 +98,8 @@ public class JobApplicationDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
         JobApplication ja=jobApplicationDao.apply(jsid,jpid,true,"home/documets/resumes");
 
         boolean actual=jobApplicationDao.cancel(ja.getAppId());
@@ -118,8 +118,8 @@ public class JobApplicationDaoTest {
         js.setPassword("123");
         js.setVerificationCode(1111);
 
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -128,8 +128,8 @@ public class JobApplicationDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -138,8 +138,8 @@ public class JobApplicationDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
         JobApplication ja=jobApplicationDao.apply(jsid,jpid,true,"home/documets/resumes");
 
         JobApplication janew=jobApplicationDao.getJobApplication(ja.getAppId());
@@ -159,9 +159,8 @@ public class JobApplicationDaoTest {
         js.setFirstName("jobseeker1");
         js.setPassword("123");
         js.setVerificationCode(1111);
-
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -170,8 +169,8 @@ public class JobApplicationDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -180,8 +179,8 @@ public class JobApplicationDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
         JobApplication ja=jobApplicationDao.apply(jsid,jpid,true,"home/documets/resumes");
 
         int actual=jobApplicationDao.getJobApplicationsbyjobId(jpid).size();
@@ -199,9 +198,8 @@ public class JobApplicationDaoTest {
         js.setFirstName("jobseeker1");
         js.setPassword("123");
         js.setVerificationCode(1111);
-
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -210,8 +208,8 @@ public class JobApplicationDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -220,8 +218,8 @@ public class JobApplicationDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
         JobApplication ja=jobApplicationDao.apply(jsid,jpid,true,"home/documets/resumes");
 
         int actual=jobApplicationDao.getJobApplicationsbyjobIdAndUserId(jpid,jsid).size();
@@ -239,8 +237,8 @@ public class JobApplicationDaoTest {
         js.setPassword("123");
         js.setVerificationCode(1111);
 
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -249,8 +247,8 @@ public class JobApplicationDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -259,13 +257,11 @@ public class JobApplicationDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
         JobApplication ja=jobApplicationDao.apply(jsid,jpid,true,"home/documets/resumes");
 
-        jobApplicationDao.modifyJobApplicationStatus(ja.getAppId(),1);
-
-        JobApplication newapp=jobApplicationDao.getJobApplication(ja.getAppId());
+        JobApplication newapp=jobApplicationDao.modifyJobApplicationStatus(ja.getAppId(),1);
         int actual=newapp.getState();
         int expected=1;
         assertEquals("testing modify state",expected,actual);
@@ -282,8 +278,8 @@ public class JobApplicationDaoTest {
         js.setPassword("123");
         js.setVerificationCode(1111);
 
-        jobSeeker.createJobSeeker(js);
-        int jsid=jobSeeker.getUserIdFromEmail("newjobseeker@gmail.com").get(0);
+        js=jobSeeker.createJobSeeker(js);
+        int jsid=js.getJobseekerId();
 
         Company c=new Company();
         c.setVerified(false);
@@ -292,8 +288,8 @@ public class JobApplicationDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -302,8 +298,8 @@ public class JobApplicationDaoTest {
         jp.setSalary("1000000");
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
         JobApplication ja=jobApplicationDao.apply(jsid,jpid,true,"home/documets/resumes");
 
         ja.setState(2);

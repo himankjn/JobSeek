@@ -77,6 +77,21 @@ public class MainController {
 					List<Integer> cidl = new ArrayList<Integer>();
 					cidl = companyDao.getCompanyIdFromEmail(email);
 					Company cmp = companyDao.getCompany(cidl.get(0));
+					if(!cmp.isVerified()){
+						int randomPIN = (int) (Math.random() * 9000) + 1000;
+						String message2="<div class=\"alert alert-danger\">Your email hasn't been verified! Please Verify the email before tyring to login. We have sent an email with new OTP.</div>";
+						cmp.setVerificationCode(randomPIN);
+						String verificationUrl = "Dear Recruiter,\n" + "One time password for registration at JobSeek is: " + randomPIN;
+
+						emailService.sendSimpleMessage(email, "Verification Pin", verificationUrl);
+						companyDao.updateCompany(cmp);
+						model.addAttribute("pin",randomPIN);
+						model.addAttribute("type","recruiter");
+						model.addAttribute("userId",cmp.getCompanyId());
+						model.addAttribute("message2",message2);
+
+						return "otpregister";
+					}
 					model.addAttribute("company", cmp);
 					
 					return "companyprofile";
@@ -95,9 +110,19 @@ public class MainController {
 					jsl = jobSeekerDao.getUserIdFromEmail(email);
 					JobSeeker js = jobSeekerDao.getJobSeeker(jsl.get(0));
 					if(!js.isVerified()){
-						String message2="<div class=\"alert alert-danger\">Your email hasn't been verified! Please Verify the email before tyring to login.</div>";
+						int randomPIN = (int) (Math.random() * 9000) + 1000;
+						String message2="<div class=\"alert alert-danger\">Your email hasn't been verified! Please Verify the email before tyring to login. We have sent an email with new OTP.</div>";
+						js.setVerificationCode(randomPIN);
+						String verificationUrl = "Dear Jobseeker,\n" + "One time password for registration at JobSeek is: " + randomPIN;
+
+						emailService.sendSimpleMessage(email, "Verification Pin", verificationUrl);
+						jobSeekerDao.updateJobSeeker(js);
+						model.addAttribute("pin",randomPIN);
+						model.addAttribute("type","seeker");
+						model.addAttribute("userId",js.getJobseekerId());
 						model.addAttribute("message2",message2);
-						return "index";
+
+						return "otpregister";
 					}
 					model.addAttribute("seeker", js);
 					return "userprofile";

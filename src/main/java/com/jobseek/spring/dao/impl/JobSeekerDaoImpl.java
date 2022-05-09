@@ -13,6 +13,8 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import com.jobseek.spring.entity.JobPosting;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,7 +30,7 @@ import com.jobseek.spring.entity.JobSeeker;
 @Transactional
 @Service
 public class JobSeekerDaoImpl implements JobSeekerDao {
-
+	private static final Logger logger = LogManager.getLogger(InterestedDaoImpl.class);
 	@PersistenceContext
 	private EntityManager entityManager;
 
@@ -40,6 +42,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 	 */
 	@Override
 	public List<?> filterJobs(JobPosting jpv, List<?> jobIds) {
+		logger.info("[filterJobs] - "+jpv.toString()+" - "+jobIds.toString());
 		boolean locationFlag = false, companyFlag = false, salaryFlag = false;
 		String selectQuery = "SELECT jpv.jobId, jpv.title, jpv.description, jpv.responsibilties, jpv.location, jpv.salary, jpv.company.companyId, jpv.state, jpv.company.companyName FROM JobPosting jpv WHERE jpv.jobId in :jobIds";
 
@@ -89,34 +92,39 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 
 		List<?> jpListRes = query.getResultList();
 
-
+		logger.info("[RESULT - filterJobs] - "+jpListRes.toString());
 		return jpListRes;
 
 	}
 
 	@Override
 	public JobSeeker createJobSeeker(JobSeeker jseeker) throws Exception {
+		logger.info("[createJobSeeker] - "+jseeker.toString());
 		try {
 			entityManager.persist(jseeker);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		logger.info("[RESULT - createJobSeeker] - "+jseeker.toString());
 		return jseeker;
 	}
 
 	@Override
 	public JobSeeker getJobSeeker(int id) {
+		logger.info("[getJobSeeker] - "+id);
 		JobSeeker js = null;
 		try {
 			js = entityManager.find(JobSeeker.class, id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		logger.info("[RESULT - getJobSeeker] - "+js.toString());
 		return js;
 	}
 
 	@Override
 	public JobSeeker updateJobSeeker(JobSeeker js) {
+		logger.info("[updateJobSeeker] - "+ js.toString());
 		JobSeeker jobseeker = getJobSeeker(js.getJobseekerId());
 		jobseeker.setEmailId(js.getEmailId());
 		jobseeker.setFirstName(js.getFirstName());
@@ -132,12 +140,13 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		logger.info("[RESULT - updateJobSeeker] - "+jobseeker.toString());
 		return jobseeker;
 	}
 
 	@Override
 	public List<String> PasswordLookUp(String emailid) {
-
+		logger.info("[PasswordLookUp] - "+emailid);
 		Query query = entityManager.createQuery("SELECT password FROM JobSeeker js WHERE js.emailId = :emailId");
 		query.setParameter("emailId", emailid);
 		List<String> list = new ArrayList<String>();
@@ -146,6 +155,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 			String pwd = (String) iterator.next();
 			list.add(pwd);
 		}
+		logger.info("[RESULT - PasswordLookUp] - "+list.toString());
 		return list;
 	}
 
@@ -159,6 +169,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 	 */
 	@Override
 	public void verify(JobSeeker j) {
+		logger.info("[verify] - "+j.toString());
 		JobSeeker jobseeker = getJobSeeker(j.getJobseekerId());
 		jobseeker.setVerified(true);
 		try {
@@ -168,7 +179,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		logger.info("[RESULT - verify] - "+true);
 	}
 
 	/*
@@ -178,6 +189,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 	 */
 	@Override
 	public List<?> searchJobs(String searchString) {
+		logger.info("[searchJobs] - "+searchString);
 		searchString = "%" + searchString + "%";
 
 
@@ -206,13 +218,14 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		logger.info("RESUTL - searchJobs] - "+list.toString());
 		return list;
 	}
 	
 	
 	@Override
 	public List<Integer> getUserIdFromEmail(String emailid) {
-
+		logger.info("[getUserIdFromEmail] - "+emailid);
 		Query query = entityManager.createQuery("SELECT jobseekerId FROM JobSeeker js WHERE js.emailId = :emailId");
 		query.setParameter("emailId", emailid);
 		List<Integer> list = new ArrayList<Integer>();
@@ -221,6 +234,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 			int uid = (int) iterator.next();
 			list.add(uid);
 		}
+		logger.info("[RESULT - getUserIdFromEmail] - "+list.toString());
 		return list;
 	}
 

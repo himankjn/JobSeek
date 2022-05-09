@@ -37,8 +37,8 @@ public class JobSeekerDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -160,8 +160,8 @@ public class JobSeekerDaoTest {
         c.setCompanyUser("testcomp1@gmail.com");
         c.setPassword("testpswd");
         c.setHeadquarters("bangalore");
-        companyDao.createCompany(c);
-        int cid=companyDao.getCompanyIdFromEmail("testcomp1@gmail.com").get(0);
+        c=companyDao.createCompany(c);
+        int cid=c.getCompanyId();
 
         JobPosting jp=new JobPosting();
         jp.setCompany(c);
@@ -171,8 +171,8 @@ public class JobSeekerDaoTest {
         jp.setResponsibilities("C++");
         jp.setLocation("Bangalore");
         jp.setKeywords("Trending");
-        jobPosting.createJobPosting(jp,cid);
-        int jpid=jobPosting.getCompanyJobPostingIds(cid).get(0);
+        jp=jobPosting.createJobPosting(jp,cid);
+        int jpid=jp.getJobId();
 
         String searchString="Trend";
 
