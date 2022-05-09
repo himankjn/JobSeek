@@ -230,14 +230,14 @@ body {
 		<div class="container">
 			<div class="well" style="margin-top: 3%">
 				<h1>
-					<strong class="text-center"><img src="https://i.pinimg.com/236x/b0/81/6b/b0816b0277a696f873c3d5db164de0ce.jpg" height="80" width="auto">Complete Registration
+					<strong class="text-center"><img src="https://i.pinimg.com/236x/b0/81/6b/b0816b0277a696f873c3d5db164de0ce.jpg" height="80" width="auto">Recruiter Profile
 						</strong>
 				</h1>
 
 			</div>
 			<div class="col-lg-12 well">
-				<h2 class="text-center">Recruiter registration</h2>
-				<br>
+<%--				<h2 class="text-center">Recruiter Profile</h2>--%>
+<%--				<br>--%>
 				<div class="row">
 					<form action="/update/company" method="post">
 					<input type="hidden" name="id" value="${company.companyId}"></input>

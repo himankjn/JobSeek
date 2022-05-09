@@ -21,9 +21,9 @@ services:
       - "8095:8095"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-jobportal:3306/jobportal?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
-#    build:
-#      context: "./"
-#      dockerfile: "Dockerfile"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
     depends_on:
       mysql-jobportal:
         condition: service_healthy

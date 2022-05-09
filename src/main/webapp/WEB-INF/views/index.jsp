@@ -269,7 +269,7 @@ body {
 
 							</div>
 
-						<div class="container-fluid">
+						<div class="container-fluid" style="box-shadow: 0 0 20px black">
 							<label><b>Email</b></label> <input type="text"
 								placeholder="Enter Email" name="emailId" required> <label><b>Password</b></label>
 							<input type="password" placeholder="Enter Password" name="password"

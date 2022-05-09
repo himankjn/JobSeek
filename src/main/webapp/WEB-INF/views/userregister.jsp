@@ -231,14 +231,14 @@ body {
 		<div class="container">
 			<div class="well" style="margin-top: 3%">
 				<h1>
-					<strong class="text-center"><img src="https://i.pinimg.com/236x/b0/81/6b/b0816b0277a696f873c3d5db164de0ce.jpg" height="80" width="auto">Complete Registration
+					<strong class="text-center"><img src="https://i.pinimg.com/236x/b0/81/6b/b0816b0277a696f873c3d5db164de0ce.jpg" height="80" width="auto">Seeker Profile
 					</strong>
 				</h1>
 
 			</div>
 			<div class="col-lg-12 well" style="box-shadow: 0 0 20px black">
-				<h1 class="text-center">Job Seeker Registration</h1>
-				<br>
+<%--				<h1 class="text-center">Job Seeker Registration</h1>--%>
+<%--				<br>--%>
 				<div class="row">
 					<form action="/update" method="post">
 
