@@ -276,8 +276,13 @@ body {
 			</div>
 
 			<c:forEach items="${jobs}" var="job">
-				<a class="a1"
-					href="/showjob?userId=${seeker.jobseekerId}&jobId=${job.jobId}">${job.title}</a>
+				<form id="jobform" method="post" action="/showjob">
+					<input type="hidden" name="userId" value="${seeker.jobseekerId}"></input>
+					<input type="hidden" name="jobId" value="${job.jobId}"></input>
+				</form>
+
+				<li class="active"><a onclick="document.getElementById('jobform').submit();">${job.title}</a></li>
+
 				<div class="row">
 					<div class="col-sm-4 groups">
 						<p>
