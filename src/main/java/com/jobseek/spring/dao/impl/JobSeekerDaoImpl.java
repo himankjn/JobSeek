@@ -134,6 +134,7 @@ public class JobSeekerDaoImpl implements JobSeekerDao {
 		jobseeker.setSkills(js.getSkills());
 		jobseeker.setWorkEx(js.getWorkEx());
 		jobseeker.setVerified(js.isVerified());
+		jobseeker.setVerificationCode(js.getVerificationCode());
 		try {
 			if (jobseeker != null) {
 				entityManager.merge(jobseeker);
