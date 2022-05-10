@@ -268,7 +268,7 @@ body {
 					<p>${fn:length(jobs)} search results</p>
 				</div>
 				<div class="col-sm-6">
-					<form action="/searchjobs" method="post">
+					<form action="/searchjobs" method="get">
 						<input type="hidden" name="userId" value="${seeker.jobseekerId}"></input>
 						<button type="submit" class="btn btn-block btn-lg btn-info">Search all jobs</button>
 					</form>

@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -62,10 +63,9 @@ public class JobSeekerController {
 	 * @param searchString
 	 * @param locations
 	 * @param companies
-	 * @param salary
 	 * @return Jobs that match the filter criteria
 	 */
-	@RequestMapping(value = "/searchjobs", method = RequestMethod.POST)
+	@RequestMapping(value = "/searchjobs", method = RequestMethod.GET)
 	public String searchJobs(@RequestParam("userId") String userId,
 			@RequestParam("searchString") Optional<String> searchString,
 			@RequestParam("locations") Optional<String> locations,
@@ -125,7 +125,9 @@ public class JobSeekerController {
 	
 	@Autowired
 	JobPostingDao jobDao;
-	
+
+
+	@Transactional
 	@RequestMapping(value = "/showjob", method = RequestMethod.POST)
 	public String showJob(@RequestParam("userId") String userId, @RequestParam("jobId") String jobId, Model model) {
 		
@@ -541,6 +543,7 @@ public class JobSeekerController {
 	 * @param jobSeekerId
 	 * @return List of the jobs the job seeker is interested in
 	 */
+	@Transactional
 	@RequestMapping(value = "/getinterestedjobs", method = RequestMethod.POST)
 	public String getInterestedJobsForJobSeeker(@RequestParam("jobSeekerId") String jobSeekerId, Model model) {
 		
