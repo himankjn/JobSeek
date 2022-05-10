@@ -278,7 +278,7 @@ body {
 			<h2>Search Results:</h2>
 			<p>${fn:length(jobs)} search results</p>
 
-			
+
 
 			<c:forEach items="${jobs}" var="job">
 				<form id="showjobform" method="post" action="/showjob">
