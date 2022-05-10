@@ -69,7 +69,6 @@ public class MainController {
 		if (type.equals("recruiter")) {
 			list = companyDao.PasswordLookUp(email);
 			if (list.size() == 0) {
-				
 				model.addAttribute("message", message);
 				return "index";
 			} else {

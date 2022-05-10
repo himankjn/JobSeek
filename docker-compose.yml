@@ -8,7 +8,7 @@ services:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=jobportal
     volumes:
-      - mysql_data_volume:/var/lib/mysql
+      - mysql_data_volume:/var/lib/mysq
     networks:
       - jobnet
     ports:

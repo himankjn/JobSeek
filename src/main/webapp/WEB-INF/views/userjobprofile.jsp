@@ -1002,11 +1002,9 @@ a.stp-back-totop {
 					<div class="col-sm-6">
 						<c:if test="${interested == 0}">
 							<form action="/interested" method="post">
-								<input type="hidden" name="userId"
-									value="${seeker.jobseekerId }"></input> <input type="hidden"
-									name="jobId" value="${job.jobId }"></input> <input
-									type="submit" class="btn btn-lg btn-block btn-info"
-									value="Add to Interested Jobs" />
+								<input type="hidden" name="userId" value="${seeker.jobseekerId }"></input>
+								<input type="hidden" name="jobId" value="${job.jobId }"></input>
+								<input type="submit" class="btn btn-lg btn-block btn-info" value="Add to Interested Jobs" />
 							</form>
 						</c:if>
 						<c:if test="${interested == 1}">

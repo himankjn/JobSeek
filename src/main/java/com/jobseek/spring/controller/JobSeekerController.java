@@ -84,7 +84,6 @@ public class JobSeekerController {
 		if(jobIds.size()==0){
 			String message="<div class=\"alert alert-danger\">No jobs available as per your requirements at the moment!</div>";
 			model.addAttribute("message",message);
-
 			JobSeeker js=jobSeekerDao.getJobSeeker(Integer.parseInt(userId));
 			model.addAttribute("seeker", js);
 			return "userprofile";
@@ -428,7 +427,7 @@ public class JobSeekerController {
 		return "companyprofile";
 
 	}
-
+	@Transactional
 	@RequestMapping(value = "/interested", method = RequestMethod.POST)
 	public String createInterest(@RequestParam("userId") String userId, @RequestParam("jobId") String jobId, Model model) {
 
@@ -437,7 +436,6 @@ public class JobSeekerController {
 			in.setJobId(Integer.parseInt(jobId));
 			in.setJobSeekerId(Integer.parseInt(userId));
 			Interested i1 = interestedDao.createInterest(in);
-			
 		} catch (Exception e) {
 
 			HttpHeaders httpHeaders = new HttpHeaders();
@@ -549,7 +547,15 @@ public class JobSeekerController {
 		
 		JobSeeker jobseeker = jobSeekerDao.getJobSeeker(Integer.parseInt(jobSeekerId));
 		List<?> jobSeekerInterestsList = jobSeekerDao.getJobSeeker(Integer.parseInt(jobSeekerId)).getInterestedjobs();
-		
+
+		if(jobSeekerInterestsList.size()==0){
+			String message="<div class=\"alert alert-danger\">You have no jobs shortlisted right now!!!</div>";
+			model.addAttribute("message",message);
+
+			JobSeeker js=jobSeekerDao.getJobSeeker(Integer.parseInt(jobSeekerId));
+			model.addAttribute("seeker", js);
+			return "userprofile";
+		}
 		model.addAttribute("jobs", jobSeekerInterestsList);
 		model.addAttribute("seeker", jobseeker);
 		return "interestedjobs";
