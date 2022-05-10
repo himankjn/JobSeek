@@ -11,8 +11,8 @@
     - copy:
         src: docker-compose.yml
         dest: ./docker-compose.yml
-        owner: himank
-        group: himank
+        owner: mugdha
+        group: mugdha
         mode: 0644
 
     - name: deploy Docker Compose
