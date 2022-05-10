@@ -97,6 +97,7 @@ public class CompanyDaoImpl implements CompanyDao {
 		c.setDescription(js.getDescription());
 		c.setHeadquarters(js.getHeadquarters());
 		c.setVerified(js.isVerified());
+		c.setVerificationCode(js.getVerificationCode());
 		try {
 			if (c != null) {
 				entityManager.merge(c);

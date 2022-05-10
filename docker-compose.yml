@@ -3,23 +3,36 @@ version: "2.1"
 services:
   mysql-jobportal:
     container_name: mysql-jobportal
-    image: "mysql:8.0.29"
+    image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=jobportal
+    volumes:
+      - mysql_data_volume:/var/lib/mysql
+    networks:
+      - jobnet
     ports:
       - "3307:3306"
     healthcheck:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
-      timeout: 20s
+      timeout: 10s
       retries: 10
   jobportal:
     container_name: jobportal
     image: himankjn/jobportal
     ports:
       - "8095:8095"
+    networks:
+      - jobnet
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-jobportal:3306/jobportal?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
     depends_on:
       mysql-jobportal:
         condition: service_healthy
+    
+networks:
+  jobnet:
+  
+volumes:
+  mysql_data_volume:
