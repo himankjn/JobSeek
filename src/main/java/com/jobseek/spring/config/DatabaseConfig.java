@@ -55,11 +55,6 @@ public class DatabaseConfig extends WebMvcConfigurerAdapter {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		
-		System.out.println(env.getProperty("db.url"));
-		System.out.println(env.getProperty("spring.mail.password"));
-
-
 		dataSource.setUrl(env.getProperty("db.url"));
 		dataSource.setUsername(env.getProperty("db.username"));
 		dataSource.setPassword(env.getProperty("db.password"));

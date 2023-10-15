@@ -3214,4 +3214,173 @@
 2022-05-10 21:17:32.603 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 79
 2022-05-10 21:17:32.603 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@163bfa13
 2022-05-10 21:17:32.603 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 266
-2022-05-10 21:17:32.603 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDao
+2022-05-10 21:17:32.603 [http-nio-8095-exec-7] INFO  com.jobseek.spring.dao.impl.InterestedDao2023-10-15 19:11:36.994 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@5c6fae3c
+2023-10-15 19:11:37.019 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@5c6fae3c
+2023-10-15 19:11:37.020 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getJobsByCompany] - 2
+2023-10-15 19:11:37.096 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getJobsByCompany] - []
+2023-10-15 19:11:37.100 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@5b7e2a88 - 2
+2023-10-15 19:11:37.104 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@5b7e2a88
+2023-10-15 19:11:37.104 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@435a13ac - 2
+2023-10-15 19:11:37.106 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@435a13ac
+2023-10-15 19:11:37.106 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getJobsByCompany] - 2
+2023-10-15 19:11:37.109 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getJobsByCompany] - [[Ljava.lang.Object;@1633962a, [Ljava.lang.Object;@2afd8972]
+2023-10-15 19:11:37.121 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@4ae836cf
+2023-10-15 19:11:37.122 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@4ae836cf
+2023-10-15 19:11:37.129 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@45295bed
+2023-10-15 19:11:37.130 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@45295bed
+2023-10-15 19:11:37.130 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [verify] - com.jobseek.spring.entity.Company@45295bed
+2023-10-15 19:11:37.131 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 4
+2023-10-15 19:11:37.131 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@45295bed
+2023-10-15 19:11:37.131 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - verify] - com.jobseek.spring.entity.Company@45295bed
+2023-10-15 19:11:37.133 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 4
+2023-10-15 19:11:37.133 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@45295bed
+2023-10-15 19:11:37.141 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@47858d7c
+2023-10-15 19:11:37.143 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@47858d7c
+2023-10-15 19:11:37.144 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [PasswordLookUp] - testcomp1@gmail.com
+2023-10-15 19:11:37.147 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [Result - PasswordLookUp] - [testpswd]
+2023-10-15 19:11:37.152 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@63f6811e
+2023-10-15 19:11:37.154 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@63f6811e
+2023-10-15 19:11:37.154 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [updateCompany] - com.jobseek.spring.entity.Company@63f6811e
+2023-10-15 19:11:37.154 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 6
+2023-10-15 19:11:37.154 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@63f6811e
+2023-10-15 19:11:37.155 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - updateCompany] - com.jobseek.spring.entity.Company@63f6811e
+2023-10-15 19:11:37.155 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 6
+2023-10-15 19:11:37.155 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@63f6811e
+2023-10-15 19:11:37.160 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@6a434cdd
+2023-10-15 19:11:37.162 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@6a434cdd
+2023-10-15 19:11:37.162 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [getCompany] - 7
+2023-10-15 19:11:37.162 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - getCompany] - com.jobseek.spring.entity.Company@6a434cdd
+2023-10-15 19:11:37.168 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@4acae4c7
+2023-10-15 19:11:37.169 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@4acae4c7
+2023-10-15 19:11:37.189 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@6979e9b8
+2023-10-15 19:11:37.190 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@6979e9b8
+2023-10-15 19:11:37.190 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@3577fd9b
+2023-10-15 19:11:37.191 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@3577fd9b
+2023-10-15 19:11:37.191 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@1c61011b - 9
+2023-10-15 19:11:37.192 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@1c61011b
+2023-10-15 19:11:37.196 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [apply] - 4 - 3 - true - home/documets/resumes
+2023-10-15 19:11:37.199 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - apply] - com.jobseek.spring.entity.JobApplication@1b81a499
+2023-10-15 19:11:37.200 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobApplicatino] - 1
+2023-10-15 19:11:37.200 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobApplication] - com.jobseek.spring.entity.JobApplication@1b81a499
+2023-10-15 19:11:37.206 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@202ed88d
+2023-10-15 19:11:37.207 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@202ed88d
+2023-10-15 19:11:37.207 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@188caeaf
+2023-10-15 19:11:37.208 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@188caeaf
+2023-10-15 19:11:37.208 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@6ac0c3aa - 10
+2023-10-15 19:11:37.210 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@6ac0c3aa
+2023-10-15 19:11:37.210 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [apply] - 5 - 4 - true - home/documets/resumes
+2023-10-15 19:11:37.212 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - apply] - com.jobseek.spring.entity.JobApplication@78652c15
+2023-10-15 19:11:37.214 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobApplicationsbyjobIdAndUserId] - 4 - 5
+2023-10-15 19:11:37.221 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobApplicationsbyjobIdAndUserId] - [[Ljava.lang.Object;@76d9fe26]
+2023-10-15 19:11:37.227 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@2d9cc10
+2023-10-15 19:11:37.228 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@2d9cc10
+2023-10-15 19:11:37.228 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@4d57fc11
+2023-10-15 19:11:37.229 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@4d57fc11
+2023-10-15 19:11:37.229 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@6df8131c - 11
+2023-10-15 19:11:37.230 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@6df8131c
+2023-10-15 19:11:37.231 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [apply] - 6 - 5 - true - home/documets/resumes
+2023-10-15 19:11:37.232 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - apply] - com.jobseek.spring.entity.JobApplication@5eaab295
+2023-10-15 19:11:37.232 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [cancel] - 3
+2023-10-15 19:11:37.232 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobApplicatino] - 3
+2023-10-15 19:11:37.232 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobApplication] - com.jobseek.spring.entity.JobApplication@5eaab295
+2023-10-15 19:11:37.232 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - cancel] - true
+2023-10-15 19:11:37.239 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@4248608d
+2023-10-15 19:11:37.241 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@4248608d
+2023-10-15 19:11:37.241 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@60eacbbf
+2023-10-15 19:11:37.242 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@60eacbbf
+2023-10-15 19:11:37.242 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@d436e51 - 12
+2023-10-15 19:11:37.242 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@d436e51
+2023-10-15 19:11:37.243 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [apply] - 7 - 6 - true - home/documets/resumes
+2023-10-15 19:11:37.243 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - apply] - com.jobseek.spring.entity.JobApplication@4e8e0052
+2023-10-15 19:11:37.244 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [modifyJobApplicationStatus] - 4 - 1
+2023-10-15 19:11:37.244 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobApplicatino] - 4
+2023-10-15 19:11:37.244 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobApplication] - com.jobseek.spring.entity.JobApplication@4e8e0052
+2023-10-15 19:11:37.244 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESUTL - modifyJobApplicationStatus] - com.jobseek.spring.entity.JobApplication@4e8e0052
+2023-10-15 19:11:37.250 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@1d63c523
+2023-10-15 19:11:37.251 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@1d63c523
+2023-10-15 19:11:37.251 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@43b41cb9
+2023-10-15 19:11:37.253 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@43b41cb9
+2023-10-15 19:11:37.253 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@53c68ea5 - 13
+2023-10-15 19:11:37.254 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@53c68ea5
+2023-10-15 19:11:37.254 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [apply] - 8 - 7 - true - home/documets/resumes
+2023-10-15 19:11:37.256 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - apply] - com.jobseek.spring.entity.JobApplication@245a90b1
+2023-10-15 19:11:37.261 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@12ec5e73
+2023-10-15 19:11:37.262 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@12ec5e73
+2023-10-15 19:11:37.262 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@7b1d3a05
+2023-10-15 19:11:37.263 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@7b1d3a05
+2023-10-15 19:11:37.264 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@6e925a46 - 14
+2023-10-15 19:11:37.265 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@6e925a46
+2023-10-15 19:11:37.265 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [apply] - 9 - 8 - true - home/documets/resumes
+2023-10-15 19:11:37.266 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - apply] - com.jobseek.spring.entity.JobApplication@6ce365b7
+2023-10-15 19:11:37.267 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [updateApplication] - com.jobseek.spring.entity.JobApplication@6ce365b7
+2023-10-15 19:11:37.267 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - updateApplication] - true
+2023-10-15 19:11:37.267 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobApplicatino] - 6
+2023-10-15 19:11:37.267 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobApplication] - com.jobseek.spring.entity.JobApplication@6ce365b7
+2023-10-15 19:11:37.273 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@cc81cb3
+2023-10-15 19:11:37.274 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@cc81cb3
+2023-10-15 19:11:37.274 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@7aead157
+2023-10-15 19:11:37.275 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@7aead157
+2023-10-15 19:11:37.275 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@74ee8f57 - 15
+2023-10-15 19:11:37.276 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@74ee8f57
+2023-10-15 19:11:37.276 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [apply] - 10 - 9 - true - home/documets/resumes
+2023-10-15 19:11:37.277 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - apply] - com.jobseek.spring.entity.JobApplication@5d6d6533
+2023-10-15 19:11:37.277 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobApplicationsbyjobId] - 9
+2023-10-15 19:11:37.282 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobApplicationbyjobId] - [[Ljava.lang.Object;@425a3af5]
+2023-10-15 19:11:37.297 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@2c6c6b7b
+2023-10-15 19:11:37.298 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@2c6c6b7b
+2023-10-15 19:11:37.298 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@776eb512 - 16
+2023-10-15 19:11:37.299 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@776eb512
+2023-10-15 19:11:37.300 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - ]getCompanyJobPostingIds] - 16
+2023-10-15 19:11:37.303 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getCompanyJobPostingIds] - [10]
+2023-10-15 19:11:37.308 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@cb29b75
+2023-10-15 19:11:37.309 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@cb29b75
+2023-10-15 19:11:37.309 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@386cc1c4 - 17
+2023-10-15 19:11:37.310 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@386cc1c4
+2023-10-15 19:11:37.314 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@269fe2fe
+2023-10-15 19:11:37.316 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@269fe2fe
+2023-10-15 19:11:37.316 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@2154de40 - 18
+2023-10-15 19:11:37.317 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@2154de40
+2023-10-15 19:11:37.317 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [deleteJobPosting] - 12
+2023-10-15 19:11:37.317 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 12
+2023-10-15 19:11:37.318 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@2154de40
+2023-10-15 19:11:37.319 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - deleteJobPosting] - true
+2023-10-15 19:11:37.324 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@6000ca67
+2023-10-15 19:11:37.325 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@6000ca67
+2023-10-15 19:11:37.325 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@565b77ba - 19
+2023-10-15 19:11:37.326 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@565b77ba
+2023-10-15 19:11:37.327 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [updateJobPosting] - com.jobseek.spring.entity.JobPosting@565b77ba
+2023-10-15 19:11:37.327 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 13
+2023-10-15 19:11:37.327 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@565b77ba
+2023-10-15 19:11:37.327 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - updateJobPosting] - com.jobseek.spring.entity.JobPosting@565b77ba
+2023-10-15 19:11:37.333 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@2968d3c0
+2023-10-15 19:11:37.334 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@2968d3c0
+2023-10-15 19:11:37.334 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@4f7b4953 - 20
+2023-10-15 19:11:37.335 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@4f7b4953
+2023-10-15 19:11:37.335 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobPosting] - 14
+2023-10-15 19:11:37.335 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobPosting] - com.jobseek.spring.entity.JobPosting@4f7b4953
+2023-10-15 19:11:37.350 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@40a32c25
+2023-10-15 19:11:37.351 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@40a32c25
+2023-10-15 19:11:37.352 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [updateJobSeeker] - com.jobseek.spring.entity.JobSeeker@40a32c25
+2023-10-15 19:11:37.352 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 11
+2023-10-15 19:11:37.352 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@40a32c25
+2023-10-15 19:11:37.352 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - updateJobSeeker] - com.jobseek.spring.entity.JobSeeker@40a32c25
+2023-10-15 19:11:37.356 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [createCompany] - com.jobseek.spring.entity.Company@32c7495
+2023-10-15 19:11:37.357 [main] INFO  com.jobseek.spring.dao.impl.CompanyDaoImpl - [RESULT - createCompany] - com.jobseek.spring.entity.Company@32c7495
+2023-10-15 19:11:37.358 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobPosting] - com.jobseek.spring.entity.JobPosting@5a14a8c1 - 21
+2023-10-15 19:11:37.358 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobPosting] - com.jobseek.spring.entity.JobPosting@5a14a8c1
+2023-10-15 19:11:37.361 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [filterJobs] - com.jobseek.spring.entity.JobPosting@5a14a8c1 - [15]
+2023-10-15 19:11:37.374 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - filterJobs] - [[Ljava.lang.Object;@6a4ba6f4]
+2023-10-15 19:11:37.379 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@792bf78a
+2023-10-15 19:11:37.381 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@792bf78a
+2023-10-15 19:11:37.381 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [verify] - com.jobseek.spring.entity.JobSeeker@792bf78a
+2023-10-15 19:11:37.381 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 12
+2023-10-15 19:11:37.381 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@792bf78a
+2023-10-15 19:11:37.381 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - verify] - true
+2023-10-15 19:11:37.381 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [getJobSeeker] - 12
+2023-10-15 19:11:37.381 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - getJobSeeker] - com.jobseek.spring.entity.JobSeeker@792bf78a
+2023-10-15 19:11:37.386 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@33cee31a
+2023-10-15 19:11:37.388 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - createJobSeeker] - com.jobseek.spring.entity.JobSeeker@33cee31a
+2023-10-15 19:11:37.388 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [PasswordLookUp] - newjobseeker@gmail.com
+2023-10-15 19:11:37.390 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [RESULT - PasswordLookUp] - [123]
+2023-10-15 19:11:37.396 [main] INFO  com.jobseek.spring.dao.impl.InterestedDaoImpl - [createJobSeeker] - com.jobseek.spring.entity.JobSeeker@705e24fb
+2023-10-15 19:11:37.397 [main] INFO  com.job
