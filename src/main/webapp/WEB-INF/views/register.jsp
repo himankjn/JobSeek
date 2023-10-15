@@ -258,19 +258,6 @@ body {
 		</div>
 
 
-
-
-
-
-<%--		<div id="team" class="container-fluid text-center">--%>
-<%--			<h1>Team:</h1>--%>
-<%--			<p>Amay</p>--%>
-<%--			<p>Ashay</p>--%>
-<%--			<p>Avdeep</p>--%>
-<%--			<p>Surendra</p>--%>
-<%--			<p>Surendra</p>--%>
-<%--		</div>--%>
-
 	</div>
 	<footer id="team" class="text-center navbar-fixed-bottom">
 		<p> &copy; 2022 JobSeek Company</p>
