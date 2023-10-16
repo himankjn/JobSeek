@@ -18,4 +18,3 @@ Note: You can use jenkins pipeline script to run above steps for automation
 * project email : org.jobseek@gmail.com
 * project password: Password@123
 * Demo recruiters email id: amazon369123@gmail.com, flipkart369123@gmail.com
-* Password for all the dummy recruiters mail: Password@123
